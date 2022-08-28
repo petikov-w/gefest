@@ -1,10 +1,14 @@
 <template lang="pug">
-h1 Gefest project v.1
+h1 {{ title }}
 </template>
 
 <script>
 export default {
   name: "App",
+  setup() {
+      const title = `${process.env.VUE_APP_TITLE}`
+    return { title }
+  }
 }
 </script>
 
