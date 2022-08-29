@@ -1,13 +1,16 @@
 <template lang="pug">
-h1 {{ title }}
+Header
+Footer
 </template>
 
 <script>
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 export default {
   name: "App",
+  components: {Header, Footer},
   setup() {
-      const title = `${process.env.VUE_APP_TITLE}`
-    return { title }
+
   }
 }
 </script>

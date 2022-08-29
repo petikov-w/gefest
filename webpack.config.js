@@ -3,10 +3,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 
-
-// const webpack = require('webpack');
-// const path = require('path');
-
 let mode = 'development'
 if (process.env.NODE_ENV === 'production') {
     mode = 'production'
