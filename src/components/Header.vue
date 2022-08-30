@@ -3,7 +3,7 @@
   .header-box
     .logo-box
       .logo-title-header {{ logo_title }}
-      .logo-subtitle {{ logo_subtitle }}
+      .logo-subtitle-header {{ logo_subtitle }}
     button.btn-header У вас уже есть поставщик?
     .call-box
       .call-telefon +7 (495) 444-44-44

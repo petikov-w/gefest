@@ -1,10 +1,10 @@
 <template lang="pug">
 footer
   .wrapper
-    .footer-box
+    .footer-box-top
       .logo-box
         .logo-title-footer {{ logo_title }}
-        .logo-subtitle {{ logo_subtitle }}
+        .logo-subtitle-footer {{ logo_subtitle }}
       .call-box
         .call-telefon +7 (495) 444-44-44
         .order-box
