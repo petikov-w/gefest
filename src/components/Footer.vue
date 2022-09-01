@@ -13,7 +13,8 @@ footer
         .circle
           img(src="../assets/images/icon-skype.png")
       .call-box
-        .call-telefon-footer +7 (495) 444-44-44
+        Telefon(:tel='telefon')
+        //.call-telefon-footer +7 (495) 444-44-44
         .order-box
           img(src="../assets/images/icon-telefon.png")
           .call-order Заказать обратный звонок
@@ -26,19 +27,31 @@ footer
 </template>
 
 <script>
+import Telefon from "@/components/NumberTelefon";
 export default {
   name: "Footer",
+  components: { Telefon},
   setup(){
     const logo_title = "Gefest";
+    const telefon = '74954444448';
     const logo_subtitle = "Производство и продажа металлопроката";
     return {
       logo_title,
-      logo_subtitle
+      logo_subtitle,
+      telefon
     }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+:deep(.telefon) {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #ffffff;
+}
 
 </style>
