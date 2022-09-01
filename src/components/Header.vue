@@ -6,7 +6,7 @@
       .logo-subtitle-header {{ logo_subtitle }}
     button.btn-header У вас уже есть поставщик?
     .call-box
-      .call-telefon +7 (495) 444-44-44
+      .call-telefon-header +7 (495) 444-44-44
       .order-box
         img(src="../assets/images/icon-telefon.png")
         .call-order Заказать обратный звонок
