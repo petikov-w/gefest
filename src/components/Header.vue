@@ -1,9 +1,16 @@
 <template lang="pug">
 .wrapper
   .header-box
-    .logo-box
-      .logo-title-header {{ logo_title }}
-      .logo-subtitle-header {{ logo_subtitle }}
+    div(v-if="isHome")
+      .logo-box
+        .logo-title-header {{ logo_title }}
+        .logo-subtitle-header {{ logo_subtitle }}
+    div(v-if="!isHome")
+      router-link( class="logo-link" :to="{ name: 'home'}")
+        .logo-box
+          .logo-title-header {{ logo_title }}
+          .logo-subtitle-header {{ logo_subtitle }}
+
     button.btn-header У вас уже есть поставщик?
     .call-box
       Telefon(:tel='telefon')
@@ -16,17 +23,25 @@ hr
 
 <script>
 import Telefon from "@/components/NumberTelefon";
+import {useRoute} from "vue-router";
+import {useStore} from 'vuex';
+import {computed} from "vue";
 export default {
   name: "Header",
   components: { Telefon },
   setup(){
-    const logo_title = "Gefest";
-    const telefon = '74954444448';
-    const logo_subtitle = "Производство и продажа металлопроката";
+    const route = useRoute();
+    const store = useStore();
+    const logo_title = computed(()=> store.getters.getLogo.title);
+    const logo_subtitle = computed(()=> store.getters.getLogo.subtitle);
+    const telefon = computed(()=> store.getters.getTelefon);
+    const isHome = computed(() => route.name==='home' ? true : false);
+
     return {
       logo_title,
       logo_subtitle,
-      telefon
+      telefon,
+      isHome
     }
   }
 }

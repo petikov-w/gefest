@@ -1,0 +1,8 @@
+.security-link, .developer-link {
+  color: #B0B8C1;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+     color: #ffffff;
+  }
+}
