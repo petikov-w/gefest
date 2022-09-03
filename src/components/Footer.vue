@@ -2,15 +2,16 @@
 footer
   .wrapper
     .footer-box-top
-      div(v-if="isHome")
-        .logo-box
-          .logo-title-footer {{ logo_title }}
-          .logo-subtitle-footer {{ logo_subtitle }}
-      div(v-if="!isHome")
-        router-link( class="logo-link" :to="{ name: 'home'}")
-          .logo-box
-            .logo-title-footer {{ logo_title }}
-            .logo-subtitle-footer {{ logo_subtitle }}
+      Logo(:is-header="false")
+      //div(v-if="isHome")
+      //  .logo-box
+      //    .logo-title-footer {{ logo_title }}
+      //    .logo-subtitle-footer {{ logo_subtitle }}
+      //div(v-if="!isHome")
+      //  router-link( class="logo-link" :to="{ name: 'home'}")
+      //    .logo-box
+      //      .logo-title-footer {{ logo_title }}
+      //      .logo-subtitle-footer {{ logo_subtitle }}
 
       .socialnet-box
         a(href="https://t.me/hardkrox")
@@ -38,26 +39,27 @@ footer
 
 <script>
 import Telefon from "@/components/NumberTelefon";
-import {useRoute} from "vue-router";
+import Logo from "@/components/Logo";
+// import {useRoute} from "vue-router";
 import {useStore} from 'vuex';
 import {computed} from "vue";
 export default {
   name: "Footer",
-  components: { Telefon},
+  components: { Telefon, Logo},
   setup(){
 
-    const route = useRoute();
+    // const route = useRoute();
     const store = useStore();
-    const logo_title = computed(()=> store.getters.getLogo.title);
-    const logo_subtitle = computed(()=> store.getters.getLogo.subtitle);
+    // const logo_title = computed(()=> store.getters.getLogo.title);
+    // const logo_subtitle = computed(()=> store.getters.getLogo.subtitle);
     const telefon = computed(()=> store.getters.getTelefon);
-    const isHome = computed(() => route.name==='home' ? true : false);
+    // const isHome = computed(() => route.name==='home' ? true : false);
 
     return {
-      logo_title,
-      logo_subtitle,
+      // logo_title,
+      // logo_subtitle,
       telefon,
-      isHome
+      // isHome
     }
   }
 }
