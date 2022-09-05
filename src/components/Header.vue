@@ -3,7 +3,7 @@ header
   .wrapper
     .header-box
       Logo(:is-header="true")
-      button.btn-header У вас уже есть поставщик?
+      button.btn.btn-header У вас уже есть поставщик?
       .call-box
         Telefon(:tel='telefon')
         .order-box

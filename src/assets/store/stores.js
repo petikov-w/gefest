@@ -18,13 +18,20 @@ export default createStore({
                          "по всей территории РФ",
             text_btn: "Получить прайс с персональными ценами"
         },
+        home_page_box_2: {
+            text_top: "Выгодные цены на<br> металлопрокат в Новосибирске",
+            text_bottom: "Обратитесь к менеджеру и он отправит вам цены на нужные позиции",
+            text_btn: "Узнать стоимость",
+            text_title_tab: "Посмотрите какие товарные группы есть в наличии в Новосибирске"
+        },
         current_route: ""
     },
     getters: {
         getLogo: (state) => state.logo,
         getTelefon: (state) => state.telefon,
         getLoadingStatus: state => state.loadingStatus,
-        getHomePageBox_1: state => state.home_page_box_1
+        getHomePageBox_1: state => state.home_page_box_1,
+        getHomePageBox_2: state => state.home_page_box_2
         // getCurrentRoute: state => state.current_route
     },
     mutations: {
@@ -38,3 +45,4 @@ export default createStore({
     }
 //===========================================================================
 })
+

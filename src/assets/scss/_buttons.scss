@@ -1,10 +1,18 @@
-.btn-header {
+.btn {
     background-color: #2D72CD;
     color: #ffffff;
-    padding: 15px;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
     border: none;
+    &-header {
+        padding: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+    &-home {
+        padding: 13px 83px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        width: 400px;
+    }
 }
