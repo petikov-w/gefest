@@ -3,7 +3,8 @@ body {
 }
 
 .wrapper {
-  width: 80vw;
+  width: 1232px;
+  //width: 80vw;
   margin: 0 auto;
 }
 
@@ -11,5 +12,12 @@ hr {
   width:100%;
   background-color:#AEB6BB;
   height:1px;
+  border-width: 0;
+}
+
+.line {
+  height: 100%;
+  background-color: #AEB6BB;
+  width: 1px;
   border-width: 0;
 }

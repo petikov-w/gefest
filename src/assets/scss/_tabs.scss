@@ -10,26 +10,33 @@
   /* скрыть контент по умолчанию */
   display: none;
   border: 1px solid #e0e0e0;
-  padding: 10px 15px;
+  //padding: 10px 15px;
   font-size: 16px;
 }
 
-/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+/* отобразить контент, связанный с выбранной радиокнопкой (input type="radio") */
 #tab-btn-1:checked~#content-1,
 #tab-btn-2:checked~#content-2,
-#tab-btn-3:checked~#content-3 {
+#tab-btn-3:checked~#content-3,
+#tab-btn-4:checked~#content-4,
+#tab-btn-5:checked~#content-5,
+#tab-btn-6:checked~#content-6
+{
   display: block;
 }
 
 .tabs>label {
   height: 133px;
-  width: 206px;
+  width: 188px;
+  //width: 190px;
+  //width: 206px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   user-select: none;
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  color: #606774;
+  border: 1px solid #D3DFE7;
   padding: 2px 8px;
   font-size: 16px;
   line-height: 1.5;
@@ -42,13 +49,45 @@
 .tabs>label:not(:first-of-type) {
   border-left: none;
 }
-
+// Выбранная вкладка
 .tabs>input[type="radio"]:checked+label {
-  background-color: #fff;
-  border-bottom: 1px solid #fff;
+  //background-color: #fff;
+  background-color: #EDF1F4;
+  color: #213252;
+  border-bottom: 1px solid #AEB6BB;
+  //border-bottom: 1px solid #fff;
+}
+
+//============================================
+
+#content-1,
+#content-2,
+#content-3,
+#content-4,
+#content-5,
+#content-6 {
+  max-height: 617px!important;
+  max-width: 1229px!important;
+  margin-bottom: 125px;
+  border: 1px solid #AEB6BB;
 }
 
 .tab-h {
-  height: 617px;
-  margin-bottom: 125px;
+  display: flex;
 }
+
+.tab-dis {
+  margin-top: 22px;
+}
+
+.text-tab {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tab-left-side {
+  border-right: 1px solid #AEB6BB;
+  margin-right: -4px;
+}
+

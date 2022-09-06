@@ -24,6 +24,45 @@ export default createStore({
             text_btn: "Узнать стоимость",
             text_title_tab: "Посмотрите какие товарные группы есть в наличии в Новосибирске"
         },
+        home_page_tabs: {
+            tab_1: {
+                image_a: require('@/assets/images/lenta_a.png'),
+                image_na: require('@/assets/images/lenta_na.png'),
+                image_main: require('@/assets/images/lenta_m.png'),
+                text: "Штрипс, лента<br> оцинкованная"
+            },
+            tab_2: {
+                image_a: require('@/assets/images/setka_a.png'),
+                image_na: require('@/assets/images/setka_na.png'),
+                image_main: require('@/assets/images/setka_m.png'),
+                text: "Сетка"
+            },
+            tab_3: {
+                image_a: require('@/assets/images/profil_a.png'),
+                image_na: require('@/assets/images/profil_na.png'),
+                image_main: require('@/assets/images/profil_m.png'),
+                text: "Профиль<br> оцинкованный"
+            },
+            tab_4: {
+                image_a: require('@/assets/images/profnastil_a.png'),
+                image_na: require('@/assets/images/profnastil_na.png'),
+                image_main: require('@/assets/images/profnastil_m.png'),
+                text: "Профнастил"
+            },
+            tab_5: {
+                image_a: require('@/assets/images/blackprocat_a.png'),
+                image_na: require('@/assets/images/blackprocat_na.png'),
+                image_main: require('@/assets/images/blackprocat_m.png'),
+                text: "Черный<br> металлопрокат"
+            },
+            tab_6: {
+                image_a: require('@/assets/images/zakaz_a.png'),
+                image_na: require('@/assets/images/zakaz_na.png'),
+                image_main: require('@/assets/images/zakaz_m.png'),
+                text: "Изделия<br> на заказ"
+            },
+        },
+
         current_route: ""
     },
     getters: {
@@ -31,8 +70,8 @@ export default createStore({
         getTelefon: (state) => state.telefon,
         getLoadingStatus: state => state.loadingStatus,
         getHomePageBox_1: state => state.home_page_box_1,
-        getHomePageBox_2: state => state.home_page_box_2
-        // getCurrentRoute: state => state.current_route
+        getHomePageBox_2: state => state.home_page_box_2,
+        getTabs : state => state.home_page_tabs
     },
     mutations: {
         setLoadingStatus(state, loadingStatus) {state.loadingStatus = loadingStatus},

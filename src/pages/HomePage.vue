@@ -15,19 +15,72 @@ hr
     .text-title-tab {{ content_box_2.text_title_tab }}
     .tabs
       input(type="radio" name="tab-btn" id="tab-btn-1" value="" checked)
-      label(for="tab-btn-1") {{ "Вкладка 1" }}
+      label(for="tab-btn-1")
+        .tab-dis
+          img(:src='content_tabs.tab_1.image_a')
+          .text-tab(v-html="content_tabs.tab_1.text")
       input(type="radio" name="tab-btn" id="tab-btn-2" value="" )
-      label(for="tab-btn-2") {{ "Вкладка 2" }}
+      label(for="tab-btn-2")
+        .tab-dis
+          img(:src='content_tabs.tab_2.image_a')
+          .text-tab(v-html="content_tabs.tab_2.text")
       input(type="radio" name="tab-btn" id="tab-btn-3" value="" )
-      label(for="tab-btn-3") {{ "Вкладка 3" }}
-      #content-1.tab-h {{ "Содержимое 1..." }}
-      #content-2.tab-h {{ "Содержимое 2..." }}
-      #content-3.tab-h {{ "Содержимое 3..." }}
+      label(for="tab-btn-3")
+        .tab-dis
+        img(:src='content_tabs.tab_3.image_a')
+        .text-tab(v-html="content_tabs.tab_3.text")
+      input(type="radio" name="tab-btn" id="tab-btn-4" value="" )
+      label(for="tab-btn-4")
+        .tab-dis
+          img(:src='content_tabs.tab_4.image_a')
+          .text-tab(v-html="content_tabs.tab_4.text")
+      input(type="radio" name="tab-btn" id="tab-btn-5" value="" )
+      label(for="tab-btn-5")
+        .tab-dis
+          img(:src='content_tabs.tab_5.image_a')
+          .text-tab(v-html="content_tabs.tab_5.text")
+      input(type="radio" name="tab-btn" id="tab-btn-6" value="" )
+      label(for="tab-btn-6")
+        .tab-dis
+          img(:src='content_tabs.tab_6.image_a')
+          .text-tab(v-html="content_tabs.tab_6.text")
 
-
-
-
-
+      #content-1
+        .tab-h
+          .tab-left-side
+            img(:src='content_tabs.tab_1.image_main' width="615")
+          .tab-right-side
+            h2 Лента
+      #content-2.tab-h
+        .tab-h
+          .tab-left-side
+            img(:src='content_tabs.tab_2.image_main' width="620")
+          .tab-right-side
+            h2 Сетка
+      #content-3.tab-h
+        .tab-h
+          .tab-left-side
+            img(:src='content_tabs.tab_3.image_main' width="620")
+          .tab-right-side
+            h2 Профиль
+      #content-4
+        .tab-h
+          .tab-left-side
+            img(:src='content_tabs.tab_4.image_main' width="620")
+          .tab-right-side
+            h2 Лента
+      #content-5.tab-h
+        .tab-h
+          .tab-left-side
+            img(:src='content_tabs.tab_5.image_main' width="620")
+          .tab-right-side
+            h2 Сетка
+      #content-6.tab-h
+        .tab-h
+          .tab-left-side
+            img(:src='content_tabs.tab_6.image_main' width="620")
+          .tab-right-side
+            h2 Профиль
 
 </template>
 
@@ -44,11 +97,14 @@ export default {
 
   setup(){
 
-     const store = useStore();
+    const store = useStore();
     const content_box_1 = computed(() => store.getters.getHomePageBox_1);
     const content_box_2 = computed(() => store.getters.getHomePageBox_2);
+    const content_tabs = computed(() => store.getters.getTabs);
+    const icon_tab = require('@/assets/images/lenta_a.png');
     return { content_box_1,
-             content_box_2 }
+             content_box_2,
+             content_tabs }
   }
 }
 </script>
