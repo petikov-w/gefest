@@ -18,69 +18,100 @@ hr
       label(for="tab-btn-1")
         .tab-dis
           img(:src='content_tabs.tab_1.image_a')
-          .text-tab(v-html="content_tabs.tab_1.text")
+          .text-tab(v-html="content_tabs.tab_1.text_tab")
       input(type="radio" name="tab-btn" id="tab-btn-2" value="" )
       label(for="tab-btn-2")
         .tab-dis
           img(:src='content_tabs.tab_2.image_a')
-          .text-tab(v-html="content_tabs.tab_2.text")
+          .text-tab(v-html="content_tabs.tab_2.text_tab")
       input(type="radio" name="tab-btn" id="tab-btn-3" value="" )
       label(for="tab-btn-3")
         .tab-dis
         img(:src='content_tabs.tab_3.image_a')
-        .text-tab(v-html="content_tabs.tab_3.text")
+        .text-tab(v-html="content_tabs.tab_3.text_tab")
       input(type="radio" name="tab-btn" id="tab-btn-4" value="" )
       label(for="tab-btn-4")
         .tab-dis
           img(:src='content_tabs.tab_4.image_a')
-          .text-tab(v-html="content_tabs.tab_4.text")
+          .text-tab(v-html="content_tabs.tab_4.text_tab")
       input(type="radio" name="tab-btn" id="tab-btn-5" value="" )
       label(for="tab-btn-5")
         .tab-dis
           img(:src='content_tabs.tab_5.image_a')
-          .text-tab(v-html="content_tabs.tab_5.text")
+          .text-tab(v-html="content_tabs.tab_5.text_tab")
       input(type="radio" name="tab-btn" id="tab-btn-6" value="" )
       label(for="tab-btn-6")
         .tab-dis
           img(:src='content_tabs.tab_6.image_a')
-          .text-tab(v-html="content_tabs.tab_6.text")
+          .text-tab(v-html="content_tabs.tab_6.text_tab")
 
       #content-1
         .tab-h
           .tab-left-side
-            img(:src='content_tabs.tab_1.image_main' width="615")
+            img(:src='content_tabs.tab_1.image_main')
           .tab-right-side
-            h2 Лента
+            .section-1
+              .title-side {{ content_tabs.tab_1.text_side }}
+              ul
+                li(v-for="item in content_tabs.tab_1.list_side" :key="index") {{ item }}
+            .section-2
+              button.btn.btn-home-tab {{ content_box_2.text_btn }}
+
       #content-2.tab-h
         .tab-h
           .tab-left-side
-            img(:src='content_tabs.tab_2.image_main' width="620")
+            img(:src='content_tabs.tab_2.image_main')
           .tab-right-side
-            h2 Сетка
+            .section-1
+              .title-side {{ content_tabs.tab_2.text_side }}
+              ul
+                li(v-for="item in content_tabs.tab_2.list_side" :key="index") {{ item }}
+            .section-2
+              button.btn.btn-home-tab {{ content_box_2.text_btn }}
       #content-3.tab-h
         .tab-h
           .tab-left-side
-            img(:src='content_tabs.tab_3.image_main' width="620")
+            img(:src='content_tabs.tab_3.image_main')
           .tab-right-side
-            h2 Профиль
+            .section-1
+              .title-side {{ content_tabs.tab_3.text_side }}
+              ul
+                li(v-for="item in content_tabs.tab_3.list_side" :key="index") {{ item }}
+            .section-2
+              button.btn.btn-home-tab {{ content_box_2.text_btn }}
       #content-4
         .tab-h
           .tab-left-side
-            img(:src='content_tabs.tab_4.image_main' width="620")
+            img(:src='content_tabs.tab_4.image_main')
           .tab-right-side
-            h2 Лента
+            .section-1
+              .title-side {{ content_tabs.tab_4.text_side }}
+              ul
+                li(v-for="item in content_tabs.tab_4.list_side" :key="index") {{ item }}
+            .section-2
+              button.btn.btn-home-tab {{ content_box_2.text_btn }}
       #content-5.tab-h
         .tab-h
           .tab-left-side
-            img(:src='content_tabs.tab_5.image_main' width="620")
+            img(:src='content_tabs.tab_5.image_main')
           .tab-right-side
-            h2 Сетка
+            .section-1
+              .title-side {{ content_tabs.tab_5.text_side }}
+              ul
+                li(v-for="item in content_tabs.tab_5.list_side" :key="index") {{ item }}
+            .section-2
+              button.btn.btn-home-tab {{ content_box_2.text_btn }}
       #content-6.tab-h
         .tab-h
           .tab-left-side
-            img(:src='content_tabs.tab_6.image_main' width="620")
+            img(:src='content_tabs.tab_6.image_main')
           .tab-right-side
-            h2 Профиль
+            .section-1
+              .title-side {{ content_tabs.tab_6.text_side }}
+              ul
+                li(v-for="item in content_tabs.tab_6.list_side" :key="index") {{ item }}
+            .section-2
+              button.btn.btn-home-tab {{ content_box_2.text_btn }}
 
 </template>
 
