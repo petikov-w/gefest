@@ -120,6 +120,7 @@ hr
 // import {useRoute} from "vue-router";
 // import {ref, computed} from "vue";
  import {computed} from "vue";
+ import storeTabs from "@/modules/storeTabs";
 // import store from "@/assets/store/store";
 
 
@@ -131,11 +132,15 @@ export default {
     const store = useStore();
     const content_box_1 = computed(() => store.getters.getHomePageBox_1);
     const content_box_2 = computed(() => store.getters.getHomePageBox_2);
-    const content_tabs = computed(() => store.getters.getTabs);
+    const content_tabs = computed(() => storeTabs.state.home_page_tabs);
+
+
+    console.log("******** >>>> ", content_tabs.value)
     const icon_tab = require('@/assets/images/lenta_a.png');
     return { content_box_1,
              content_box_2,
-             content_tabs }
+             content_tabs
+    }
   }
 }
 </script>
