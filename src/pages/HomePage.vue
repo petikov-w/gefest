@@ -16,10 +16,23 @@ hr
     include ../assets/pug/tabs
 .box-3
   .wrapper
-    form(v-html="content_box_3.form_title")
-    img(:src='content_box_3.form_image')
-  .box-4
-  .box-5
+    .seed
+      .seed-1
+        form()
+          .form-title(v-html="content_box_3.form_title")
+          .in-1
+            input
+            input
+          .in-2
+            input
+            input
+          button
+          .form-policy(v-html="content_box_3.text_policy")
+
+      .seed-2
+        img(:src='content_box_3.form_image')
+.box-4
+.box-5
 
 
 
@@ -115,18 +128,27 @@ export default {
     background-color: #213252;
     width: 100%;
     height: 680px;
-    position: relative;
-    form {
-      padding-top: 76px;
-      color: #ffffff;
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 52px;
-    }
-    img {
-      position: absolute;
-      right: 630px;
-      top: -53px;
+    //display: flex;
+    //position: relative;
+    .seed {
+      display: flex;
+      .seed-1 {
+        //width: 50%;
+        form {
+          padding-top: 76px;
+          color: #ffffff;
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 52px;
+        }
+      }
+      .seed-2 {
+        //width: 50%;
+        img {
+          margin-left: 63px;
+          margin-top: -53px;
+        }
+      }
     }
   }
 </style>
