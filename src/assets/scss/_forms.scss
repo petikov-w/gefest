@@ -1,0 +1,56 @@
+form {
+  input {
+    height: 57px;
+    width: 298px;
+    border-radius: 4px;
+  }
+  input:nth-child(odd) {
+    margin-right: 15px;
+  }
+
+  .in-1, .in-2 {
+    display: flex;
+  }
+
+  .in-1 {
+    margin-bottom: 25px;
+  }
+
+  .in-2 {
+    margin-bottom: 8px;
+  }
+  }
+
+.box3-form {
+  .form {
+    &-title,
+    &-subtitle,
+    &-policy {
+      color: #ffffff;
+    }
+    &-title {
+      padding-top: 76px;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 52px;
+      margin-bottom: 35px;
+    }
+    &-subtitle {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+    &-policy {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+  }
+}
+
+
+
+
+
+

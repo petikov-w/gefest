@@ -1,0 +1,33 @@
+.box3-form
+    form()
+        .form-title(v-html="content_box_3.form_title")
+        .in-1
+            label(for='email') {{ content_box_3.form_labels.email}}
+            input#email(
+                required
+                name="email"
+                placeholder="Имя"
+            )
+
+            label(for='company') {{ content_box_3.form_labels.company }}
+            input#company(
+                required
+                name="company"
+                placeholder="Имя"
+            )
+        .in-2
+            label(for='name') {{ content_box_3.form_labels.name }}
+            input#name(
+                required
+                name="name"
+                placeholder="Имя"
+            )
+            label(for='telefon') {{ content_box_3.form_labels.telefon }}
+            input#telefon(
+                required
+                name="telefon"
+                placeholder="Имя"
+            )
+        .form-subtitle {{ content_box_3.form_subtitle }}
+        button.btn.btn-home-box3 {{ content_box_3.text_btn }}
+        .form-policy(v-html="content_box_3.text_policy")

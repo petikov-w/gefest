@@ -18,17 +18,7 @@ hr
   .wrapper
     .seed
       .seed-1
-        form()
-          .form-title(v-html="content_box_3.form_title")
-          .in-1
-            input
-            input
-          .in-2
-            input
-            input
-          button
-          .form-policy(v-html="content_box_3.text_policy")
-
+       include ../assets/pug/form_box3
       .seed-2
         img(:src='content_box_3.form_image')
 .box-4
@@ -125,27 +115,15 @@ export default {
     }
   }
   .box-3 {
-    background-color: #213252;
+    background-color: #1A2C41;
     width: 100%;
     height: 680px;
-    //display: flex;
-    //position: relative;
     .seed {
       display: flex;
       .seed-1 {
-        //width: 50%;
-        form {
-          padding-top: 76px;
-          color: #ffffff;
-          font-size: 40px;
-          font-weight: 600;
-          line-height: 52px;
-        }
       }
       .seed-2 {
-        //width: 50%;
         img {
-          margin-left: 63px;
           margin-top: -53px;
         }
       }
