@@ -13,116 +13,21 @@ hr
     .text-top(v-html="content_box_2.text_top" )
     .text-bottom {{ content_box_2.text_bottom }}
     .text-title-tab {{ content_box_2.text_title_tab }}
-    .tabs
-      input(type="radio" name="tab-btn" id="tab-btn-1" value="" checked)
-      label(for="tab-btn-1")
-        .tab-dis
-          img(:src='content_tabs.tab_1.image_a')
-          .text-tab(v-html="content_tabs.tab_1.text_tab")
-      input(type="radio" name="tab-btn" id="tab-btn-2" value="" )
-      label(for="tab-btn-2")
-        .tab-dis
-          img(:src='content_tabs.tab_2.image_a')
-          .text-tab(v-html="content_tabs.tab_2.text_tab")
-      input(type="radio" name="tab-btn" id="tab-btn-3" value="" )
-      label(for="tab-btn-3")
-        .tab-dis
-        img(:src='content_tabs.tab_3.image_a')
-        .text-tab(v-html="content_tabs.tab_3.text_tab")
-      input(type="radio" name="tab-btn" id="tab-btn-4" value="" )
-      label(for="tab-btn-4")
-        .tab-dis
-          img(:src='content_tabs.tab_4.image_a')
-          .text-tab(v-html="content_tabs.tab_4.text_tab")
-      input(type="radio" name="tab-btn" id="tab-btn-5" value="" )
-      label(for="tab-btn-5")
-        .tab-dis
-          img(:src='content_tabs.tab_5.image_a')
-          .text-tab(v-html="content_tabs.tab_5.text_tab")
-      input(type="radio" name="tab-btn" id="tab-btn-6" value="" )
-      label(for="tab-btn-6")
-        .tab-dis
-          img(:src='content_tabs.tab_6.image_a')
-          .text-tab(v-html="content_tabs.tab_6.text_tab")
+    include ../assets/pug/tabs
+.box-3
+  .wrapper
+    form(v-html="content_box_3.form_title")
+    img(:src='content_box_3.form_image')
+  .box-4
+  .box-5
 
-      #content-1
-        .tab-h
-          .tab-left-side
-            img(:src='content_tabs.tab_1.image_main')
-          .tab-right-side
-            .section-1
-              .title-side {{ content_tabs.tab_1.text_side }}
-              ul
-                li(v-for="item in content_tabs.tab_1.list_side" :key="index") {{ item }}
-            .section-2
-              button.btn.btn-home-tab {{ content_box_2.text_btn }}
 
-      #content-2.tab-h
-        .tab-h
-          .tab-left-side
-            img(:src='content_tabs.tab_2.image_main')
-          .tab-right-side
-            .section-1
-              .title-side {{ content_tabs.tab_2.text_side }}
-              ul
-                li(v-for="item in content_tabs.tab_2.list_side" :key="index") {{ item }}
-            .section-2
-              button.btn.btn-home-tab {{ content_box_2.text_btn }}
-      #content-3.tab-h
-        .tab-h
-          .tab-left-side
-            img(:src='content_tabs.tab_3.image_main')
-          .tab-right-side
-            .section-1
-              .title-side {{ content_tabs.tab_3.text_side }}
-              ul
-                li(v-for="item in content_tabs.tab_3.list_side" :key="index") {{ item }}
-            .section-2
-              button.btn.btn-home-tab {{ content_box_2.text_btn }}
-      #content-4
-        .tab-h
-          .tab-left-side
-            img(:src='content_tabs.tab_4.image_main')
-          .tab-right-side
-            .section-1
-              .title-side {{ content_tabs.tab_4.text_side }}
-              ul
-                li(v-for="item in content_tabs.tab_4.list_side" :key="index") {{ item }}
-            .section-2
-              button.btn.btn-home-tab {{ content_box_2.text_btn }}
-      #content-5.tab-h
-        .tab-h
-          .tab-left-side
-            img(:src='content_tabs.tab_5.image_main')
-          .tab-right-side
-            .section-1
-              .title-side {{ content_tabs.tab_5.text_side }}
-              ul
-                li(v-for="item in content_tabs.tab_5.list_side" :key="index") {{ item }}
-            .section-2
-              button.btn.btn-home-tab {{ content_box_2.text_btn }}
-      #content-6.tab-h
-        .tab-h
-          .tab-left-side
-            img(:src='content_tabs.tab_6.image_main')
-          .tab-right-side
-            .section-1
-              .title-side {{ content_tabs.tab_6.text_side }}
-              ul
-                li(v-for="item in content_tabs.tab_6.list_side" :key="index") {{ item }}
-            .section-2
-              button.btn.btn-home-tab {{ content_box_2.text_btn }}
 
 </template>
 
 <script>
  import {useStore} from 'vuex';
-// import {useRoute} from "vue-router";
-// import {ref, computed} from "vue";
  import {computed} from "vue";
- import storeTabs from "@/modules/storeTabs";
-// import store from "@/assets/store/store";
-
 
 export default {
   name: "HomePage",
@@ -132,13 +37,19 @@ export default {
     const store = useStore();
     const content_box_1 = computed(() => store.getters.getHomePageBox_1);
     const content_box_2 = computed(() => store.getters.getHomePageBox_2);
-    const content_tabs = computed(() => storeTabs.state.home_page_tabs);
+    const content_box_3 = computed(() => store.getters.getHomePageBox_3);
+    const content_box_4 = computed(() => store.getters.getHomePageBox_4);
+    const content_box_5 = computed(() => store.getters.getHomePageBox_5);
+    const content_tabs = computed(() => store.getters.getTabs);
 
 
     console.log("******** >>>> ", content_tabs.value)
     const icon_tab = require('@/assets/images/lenta_a.png');
     return { content_box_1,
              content_box_2,
+             content_box_3,
+             content_box_4,
+             content_box_5,
              content_tabs
     }
   }
@@ -198,6 +109,24 @@ export default {
       font-size: 24px;
       line-height: 36px;
 
+    }
+  }
+  .box-3 {
+    background-color: #213252;
+    width: 100%;
+    height: 680px;
+    position: relative;
+    form {
+      padding-top: 76px;
+      color: #ffffff;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 52px;
+    }
+    img {
+      position: absolute;
+      right: 630px;
+      top: -53px;
     }
   }
 </style>
