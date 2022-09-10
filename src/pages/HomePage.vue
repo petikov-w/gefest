@@ -22,6 +22,20 @@ hr
       .seed-2
         img(:src='content_box_3.form_image')
 .box-4
+  .wrapper
+    .text-title {{ content_box_4.text_title }}
+    .text-subtitle {{ content_box_4.text_subtitle }}
+    .section-sklad
+      .left-box
+        div(v-for="(item, index) in content_box_4.left_section" :key="index")
+          .list-sklad
+            img(:src='item.image')
+            p(v-html="item.title" )
+
+      .right-box
+        .sklad-info
+          img(:src='content_box_4.right_section.image')
+          .text-sklad(v-html="content_box_4.right_section.title")
 .box-5
 
 
@@ -128,5 +142,51 @@ export default {
         }
       }
     }
+  }
+  .box-4 {
+    .text-title {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 52px;
+      color: #213252;
+      margin-top: 161px;
+      margin-bottom: 25px;
+    }
+    .text-subtitle{
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+      color: #213252;
+      margin-bottom: 60px;
+    }
+    .section-sklad {
+      display: flex;
+      justify-content: space-between;
+      .list-sklad {
+        display: flex;
+        align-items: center;
+        //justify-content: center;
+        img {
+          width: 192px;
+          margin-bottom: 25px;
+          margin-right: 40px;
+        }
+        p {
+          margin-top: -20px;
+        }
+      }
+    }
+    .right-box .sklad-info img {
+      position: relative;
+      z-index: 0;
+    }
+    .right-box .sklad-info .text-sklad {
+      position: absolute;
+      //top: 0;
+      //left: 0;
+      z-index: 99;
+      color: #ffffff;
+    }
+
   }
 </style>
