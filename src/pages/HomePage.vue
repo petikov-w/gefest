@@ -35,8 +35,13 @@ hr
       .right-box
         .sklad-info
           img(:src='content_box_4.right_section.image')
-          .text-sklad(v-html="content_box_4.right_section.title")
+          .ssdd
+            .text-sklad(v-html="content_box_4.right_section.title")
 .box-5
+  .wrapper
+    .layout
+      img(:src='content_box_5.image_fon')
+      .text-title(v-html="content_box_5.title" )
 
 
 
@@ -176,17 +181,46 @@ export default {
         }
       }
     }
-    .right-box .sklad-info img {
-      position: relative;
-      z-index: 0;
-    }
-    .right-box .sklad-info .text-sklad {
-      position: absolute;
-      //top: 0;
-      //left: 0;
-      z-index: 99;
-      color: #ffffff;
+    .right-box {
+      .sklad-info  {
+        position: relative;
+        .ssdd {
+          bottom: 0;
+          position: absolute;
+          background-color: #211D1D;
+          height: 90px;
+          width: 100%;
+          .text-sklad {
+            margin-left: 50px;
+            margin-top: 17px;
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+
+      }
+
     }
 
+
+  }
+  .box-5 {
+    margin: 175px 0;
+    .layout {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .text-title {
+        position: absolute;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 52px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
   }
 </style>
