@@ -29,8 +29,8 @@ hr
       .left-box
         div(v-for="(item, index) in content_box_4.left_section" :key="index")
           .list-sklad
-            img(:src='item.image')
-            p(v-html="item.title" )
+            img(:src='content_box_4.left_section[index].image')
+            p(v-html="content_box_4.left_section[index].title" )
 
       .right-box
         .sklad-info
@@ -43,8 +43,13 @@ hr
       img(:src='content_box_5.image_fon')
       .text-title(v-html="content_box_5.title" )
 
-
-
+.box-6
+  .wrapper
+    div(v-for="(item, index) in content_box_6" :key="index")
+      .section-info
+        img(:src='content_box_6[index].image')
+        .section-title(v-html="content_box_6[index].title" )
+        .section-text(v-html="content_box_6[index].text" )
 </template>
 
 <script>
@@ -62,6 +67,7 @@ export default {
     const content_box_3 = computed(() => store.getters.getHomePageBox_3);
     const content_box_4 = computed(() => store.getters.getHomePageBox_4);
     const content_box_5 = computed(() => store.getters.getHomePageBox_5);
+    const content_box_6 = computed(() => store.getters.getHomePageBox_6);
     const content_tabs = computed(() => store.getters.getTabs);
 
 
@@ -72,6 +78,7 @@ export default {
              content_box_3,
              content_box_4,
              content_box_5,
+             content_box_6,
              content_tabs
     }
   }
@@ -199,12 +206,8 @@ export default {
             line-height: 28px;
           }
         }
-
       }
-
     }
-
-
   }
   .box-5 {
     margin: 175px 0;
@@ -222,5 +225,8 @@ export default {
         color: #ffffff;
       }
     }
+  }
+  .box-6 {
+
   }
 </style>
