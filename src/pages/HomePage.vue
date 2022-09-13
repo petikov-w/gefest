@@ -57,6 +57,16 @@ hr
             .section-title(v-html="content_box_6[index].title" )
             .section-text(v-html="content_box_6[index].text" )
 .box-7
+  .wrapper
+    sections
+      section-info
+        .title(v-html="content_box_7.title")
+        .text1(v-html="content_box_7.text1")
+        .text2(v-html="content_box_7.text2")
+      section-image
+        img(:src='content_box_7.image')
+      section-form
+        include ../assets/pug/form_box7
 .box-8
   .wrapper
     .title-1 {{ content_box_8.text_title_1 }}
@@ -290,6 +300,58 @@ export default {
   width: 100%;
   height: 763px;
   margin-top: 60px;
+  sections {
+    display: flex;
+
+  }
+  section-info {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 50px;
+      margin-bottom: 38px;
+      margin-top: 88px;
+      //position: absolute;
+    }
+    .text1 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      //position: absolute;
+    }
+    .text2 {
+      background-color: #ffffff;
+      //width: 480px;
+      padding: 33px 30px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      border: 1px solid #DBE1E4;
+      border-radius: 8px;
+      position: absolute;
+      z-index: 99;
+      margin-top: 521px;
+      margin-left: 125px;
+      //top: 30px;
+      //left: 200px;
+    }
+  }
+  section-image {
+    width: 28%;
+    position: relative;
+    border-right: 1px solid #DBE1E4;
+
+    z-index: 1;
+    img {
+      margin-left: -170px;
+    }
+  }
+  section-form {
+    width: 40%;
+  }
 }
 .box-8 {
   color: #213252;
