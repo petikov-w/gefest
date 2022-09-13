@@ -74,8 +74,10 @@ hr
         .title-2 {{ content_box_9.text_title }}
         .text(v-html="content_box_9.text" )
       subsection-2
+       subsection-3
         img(:src='content_box_9.icon_partner1')
         img(:src='content_box_9.icon_partner2')
+       subsection-4
         img(:src='content_box_9.icon_partner3')
         img(:src='content_box_9.icon_partner4')
 
@@ -337,11 +339,31 @@ export default {
    section {
      display: flex;
      align-items: center;
+     margin-bottom: 162px;
      subsection {
-       width: 50%;
+       width: 55%;
+       margin-top: 65px;
+       .title-2 {
+         font-size: 22px;
+         font-weight: 600;
+         line-height: 32px;
+         margin-bottom: 24px;
+       }
+       .text {
+         font-size: 18px;
+         font-weight: 400;
+         line-height: 30px;
+       }
      }
      subsection-2 {
-       width: 50%;
+       width: 45%;
+     }
+     subsection-4 {
+       width: 500px;
+       display: flex;
+       align-items: flex-start;
+       justify-content: space-between;
+       margin-top: 40px;
      }
    }
 }
