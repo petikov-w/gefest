@@ -1,0 +1,20 @@
+@mixin font_01 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #213252;
+}
+
+@mixin font_btn_forms {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+@mixin font_label_form7 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #213252;
+}

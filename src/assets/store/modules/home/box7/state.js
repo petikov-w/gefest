@@ -31,9 +31,9 @@ export default {
         form_subtitle2: "Или напишите нам на почту info@tpk-gefest.ru",
         form_image: require('@/assets/images/form_box3.png'),
         text_btn: "Узнать стоимость",
-        text_policy: "Нажимая на кнопку, вы даете согласие на обработку<br>" +
-            " своих персональных данных и соглашаетесь с<br>" +
-            " Политикой конфиденциальности"
+        text_policy: "Нажимая на кнопку, вы даете согласие на<br>" +
+                     " обработку своих персональных данных<br>" +
+                     " и соглашаетесь с <a href='#' style='color:#2D72CD; text-decoration: none'> Политикой конфиденциальности</a>"
 
     }
 }

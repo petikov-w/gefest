@@ -305,7 +305,7 @@ export default {
 
   }
   section-info {
-    width: 35%;
+    width: 31%;
     display: flex;
     flex-direction: column;
     .title {
@@ -334,9 +334,8 @@ export default {
       position: absolute;
       z-index: 99;
       margin-top: 521px;
-      margin-left: 125px;
-      //top: 30px;
-      //left: 200px;
+      margin-left: 110px;
+
     }
   }
   section-image {
@@ -350,7 +349,7 @@ export default {
     }
   }
   section-form {
-    width: 40%;
+    width: 41%;
   }
 }
 .box-8 {

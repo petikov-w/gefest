@@ -1,36 +1,27 @@
 .box7-form
     form()
         .form-title(v-html="content_box_7.form_title")
-        //.in-1
-        //    .input-box
-        //        label(for='email') {{ content_box_3.form_labels.email}}
-        //        input#email(
-        //            required
-        //            name="email"
-        //            :placeholder="content_box_3.form_placeholders.email"
-        //        )
-        //    .input-box
-        //        label(for='company') {{ content_box_3.form_labels.company }}
-        //        input#company(
-        //            required
-        //            name="company"
-        //            :placeholder="content_box_3.form_placeholders.company"
-        //        )
-        //.in-2
-        //    .input-box
-        //        label(for='name') {{ content_box_3.form_labels.name }}
-        //        input#name(
-        //            required
-        //            name="name"
-        //            :placeholder="content_box_3.form_placeholders.name"
-        //        )
-        //    .input-box
-        //        label(for='telefon') {{ content_box_3.form_labels.telefon }}
-        //        input#telefon(
-        //            required
-        //            name="telefon"
-        //            :placeholder="content_box_3.form_placeholders.telefon"
-        //        )
+        .input-box
+            label(for='name') {{ content_box_7.form_labels.name }}
+            input#name(
+                required
+                name="name"
+                :placeholder="content_box_7.form_placeholders.name"
+            )
+        .input-box
+            label(for='telefon') {{ content_box_7.form_labels.telefon }}
+            input#telefon(
+                required
+                name="telefon"
+                :placeholder="content_box_7.form_placeholders.telefon"
+            )
+        .input-box
+            label(for='email') {{ content_box_7.form_labels.email}}
+            input#email(
+                required
+                name="email"
+                :placeholder="content_box_7.form_placeholders.email"
+            )
         //.form-subtitle {{ content_box_3.form_subtitle }}
-        button.btn.btn-home-box3 {{ content_box_7.text_btn }}
+        button.btn.btn-home-box7 {{ content_box_7.text_btn }}
         .form-policy(v-html="content_box_7.text_policy")

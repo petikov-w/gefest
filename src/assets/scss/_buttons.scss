@@ -15,18 +15,20 @@
         line-height: 22px;
         width: 400px;
         &-tab {
-            margin-left: 63px;
+            @include font_btn_forms;
             padding: 15px 52px;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 19px;
+            margin-left: 63px;
         }
         &-box3 {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 19px;
+            @include font_btn_forms;
             padding: 21px 129px;
             margin-bottom: 20px;
+        }
+        &-box7 {
+            @include font_btn_forms;
+            padding: 21px 84px;
+            margin-top: 20px;
+            margin-bottom: 15px;
         }
     }
 }
