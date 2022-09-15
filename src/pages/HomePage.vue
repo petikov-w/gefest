@@ -77,6 +77,7 @@ hr
       subsection-2
         img(:src='content_box_8.image')
         img(:src='content_box_8.icon')
+hr
 .box-9
   .wrapper
     section
@@ -90,7 +91,11 @@ hr
        subsection-4
         img(:src='content_box_9.icon_partner3')
         img(:src='content_box_9.icon_partner4')
-
+.box-10
+  .wrapper
+.box-11
+  .wrapper
+    img(:src='content_box_9.icon_partner3')
 </template>
 
 <script>
@@ -428,5 +433,12 @@ export default {
      }
    }
 }
-
+.box-10 {
+  background-color: #F6F6F6;
+  width: 100%;
+  height: 763px;
+}
+.box-11 {
+  height: 916px;
+}
 </style>

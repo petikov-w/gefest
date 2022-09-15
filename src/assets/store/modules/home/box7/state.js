@@ -33,7 +33,8 @@ export default {
         text_btn: "Узнать стоимость",
         text_policy: "Нажимая на кнопку, вы даете согласие на<br>" +
                      " обработку своих персональных данных<br>" +
-                     " и соглашаетесь с <a href='#' style='color:#2D72CD; text-decoration: none'> Политикой конфиденциальности</a>"
+                     " и соглашаетесь с <a href='/policy' style='color:#2D72CD; text-decoration: none'> Политикой конфиденциальности</a>"
+
 
     }
 }

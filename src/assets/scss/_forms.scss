@@ -4,8 +4,8 @@ form {
     width: 298px;
     border-radius: 4px;
     padding-left: 10px;
-    border-color: #CDD6DB;
-    outline: none;
+    border:1px solid #CDD6DB;
+    outline: 0;
     &::placeholder {
       font-size: 16px;
       font-weight: 400;
