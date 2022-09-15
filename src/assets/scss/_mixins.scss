@@ -12,9 +12,10 @@
   color: #ffffff;
 }
 
-@mixin font_label_form7 {
+@mixin font_label_form($fon:"dark") {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  color: #213252;
+  @if $fon=='light' {color: #213252;}
+  @else if $fon=='dark' { color: #ffffff;}
 }

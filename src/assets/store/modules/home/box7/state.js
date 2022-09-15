@@ -28,8 +28,8 @@ export default {
 
         form_subtitle1: "Прикрепите файлы<br>" +
                         " (заказ,спецификацию, смету, если есть)",
-        form_subtitle2: "Или напишите нам на почту info@tpk-gefest.ru",
-        form_image: require('@/assets/images/form_box3.png'),
+        form_subtitle2: "Или напишите нам на почту <a href='mailto:info@tpk-gefest.ru' style='color:#213252;text-decoration:none'><b>info@tpk-gefest.ru</b></a>",
+        form_image: require('@/assets/images/icon-skrepka.png'),
         text_btn: "Узнать стоимость",
         text_policy: "Нажимая на кнопку, вы даете согласие на<br>" +
                      " обработку своих персональных данных<br>" +

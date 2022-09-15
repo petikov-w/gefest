@@ -1,27 +1,30 @@
 .box7-form
     form()
         .form-title(v-html="content_box_7.form_title")
-        .input-box
-            label(for='name') {{ content_box_7.form_labels.name }}
+        .input-box.mb15
+            label.box7.mb2(for='name') {{ content_box_7.form_labels.name }}
             input#name(
                 required
                 name="name"
                 :placeholder="content_box_7.form_placeholders.name"
             )
-        .input-box
-            label(for='telefon') {{ content_box_7.form_labels.telefon }}
+        .input-box.mb15
+            label.box7.mb2(for='telefon') {{ content_box_7.form_labels.telefon }}
             input#telefon(
                 required
                 name="telefon"
                 :placeholder="content_box_7.form_placeholders.telefon"
             )
-        .input-box
-            label(for='email') {{ content_box_7.form_labels.email}}
+        .input-box.mb25
+            label.box7.mb2(for='email') {{ content_box_7.form_labels.email}}
             input#email(
                 required
                 name="email"
                 :placeholder="content_box_7.form_placeholders.email"
             )
-        //.form-subtitle {{ content_box_3.form_subtitle }}
+        section-file
+            img.mt3.mr5(:src='content_box_7.form_image' height="19" width="13")
+            .form-subtitle.mb15(v-html="content_box_7.form_subtitle1" )
+        .form-subtitle2(v-html="content_box_7.form_subtitle2" )
         button.btn.btn-home-box7 {{ content_box_7.text_btn }}
         .form-policy(v-html="content_box_7.text_policy")

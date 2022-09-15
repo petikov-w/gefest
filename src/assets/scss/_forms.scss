@@ -4,6 +4,8 @@ form {
     width: 298px;
     border-radius: 4px;
     padding-left: 10px;
+    border-color: #CDD6DB;
+    outline: none;
     &::placeholder {
       font-size: 16px;
       font-weight: 400;
@@ -16,14 +18,6 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    label {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 28px;
-      color: #ffffff;
-      margin-bottom: 10px;
-
-    }
   }
   .input-box:nth-child(odd) {
     margin-right: 15px;
@@ -31,15 +25,23 @@ form {
   .in-1, .in-2 {
     display: flex;
   }
-
   .in-1 {
     margin-bottom: 25px;
   }
-
   .in-2 {
     margin-bottom: 8px;
   }
   }
+
+
+.box3 {
+  @include font_label_form("dark")
+}
+.box7 {
+  @include font_label_form("light");
+
+}
+
 
 .box3-form {
   .form {
@@ -75,17 +77,19 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   .form {
-    &-title,
-    &-subtitle,
-    &-policy {
-      //color: #ffffff;
-    }
-
     &-title {
       margin-top: 102px;
       margin-bottom: 25px;
       @include font_01;
     }
+    &-subtitle, &-subtitle2 {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      color: #213252;
+    }
+    &-subtitle { font-weight: 400; }
+    &-subtitle2 { font-weight: 300; }
     &-policy {
       font-size: 12px;
       font-weight: 400;
@@ -93,10 +97,11 @@ form {
       text-align: center;
       color: #5F6369;
       max-width: 307px;
-
-
     }
-
+  }
+  section-file {
+    display: flex;
+    //align-items: center;
   }
 }
 
