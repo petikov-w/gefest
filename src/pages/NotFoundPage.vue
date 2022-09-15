@@ -3,9 +3,10 @@
 .wrapper-home
   .is404 404
   .title Страница не найдена
+  router-link(to="/" class="btn") Вернуться на главную
   //img(src="@/assets/images/btn_back_to_the_site.png" @click="back_to_main")
   //.btn-main
-  //  router-link(to="/" class="btn btnPrimary") Вернуться на главную
+
 
 </template>
 
