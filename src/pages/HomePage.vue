@@ -117,6 +117,8 @@ export default {
     const content_box_7 = computed(() => store.getters.getHomePageBox_7);
     const content_box_8 = computed(() => store.getters.getHomePageBox_8);
     const content_box_9 = computed(() => store.getters.getHomePageBox_9);
+    const content_box_10 = computed(() => store.getters.getHomePageBox_10);
+    const content_box_11 = computed(() => store.getters.getHomePageBox_11);
     const content_tabs = computed(() => store.getters.getTabs);
 
 
@@ -131,6 +133,8 @@ export default {
       content_box_7,
       content_box_8,
       content_box_9,
+      content_box_10,
+      content_box_11,
       content_tabs
     }
   }

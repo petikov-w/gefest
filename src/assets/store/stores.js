@@ -9,6 +9,8 @@ import moduleBox6 from "@/assets/store/modules/home/box6"
 import moduleBox7 from "@/assets/store/modules/home/box7"
 import moduleBox8 from "@/assets/store/modules/home/box8"
 import moduleBox9 from "@/assets/store/modules/home/box9"
+import moduleBox10 from "@/assets/store/modules/home/box10"
+import moduleBox11 from "@/assets/store/modules/home/box11"
 import moduleTabs from "@/assets/store/modules/home/tabs"
 
 export default createStore({
@@ -23,6 +25,8 @@ export default createStore({
         moduleBox7,
         moduleBox8,
         moduleBox9,
+        moduleBox10,
+        moduleBox11,
         moduleTabs
     }
 })
