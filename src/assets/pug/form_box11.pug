@@ -1,0 +1,10 @@
+.box11-form
+    .form-title(v-html="content_box_11.form_text")
+    form()
+        .input-box2
+            input.input-box11(
+                required
+                name="telefon"
+                :placeholder="content_box_11.form_input_placeholder"
+            )
+            button.btn.btn-home-box11 {{ content_box_11.form_text_button }}

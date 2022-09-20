@@ -11,13 +11,23 @@ form {
       font-weight: 400;
       line-height: 28px;
       color: #65677C;
-
     }
+  }
+  .input-box11 {
+    //background-color: #65677C;
+    /* top left, top right, bottom right, bottom left */
+    border-radius: 4px 0 0 4px;
   }
   .input-box {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+  .input-box2 {
+    display: flex;
+   //flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
   }
   .input-box:nth-child(odd) {
     margin-right: 15px;
@@ -104,6 +114,26 @@ form {
     //align-items: center;
   }
 }
+
+.box11-form {
+    background-color: #1A2C41;
+    color: #ffffff;
+    padding: 28px 104px 40px 104px;
+    border-radius: 4px ;
+    //top: 50px;
+    //position: absolute;
+    .form {
+      &-title {
+        width: 504px;
+        margin-bottom: 25px;
+        font-weight: 400;
+
+      }
+    }
+}
+
+
+
 
 
 

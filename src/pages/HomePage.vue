@@ -93,9 +93,27 @@ hr
         img(:src='content_box_9.icon_partner4')
 .box-10
   .wrapper
+    section-1
+      .title(v-html="content_box_10.text_title" )
+      .subtitle(v-html="content_box_10.text_subtitle" )
+    section-2
+      img(:src='content_box_10.image_doc1')
+      img(:src='content_box_10.image_doc2')
+      img(:src='content_box_10.image_doc3')
+      img(:src='content_box_10.image_doc4')
 .box-11
   .wrapper
-    img(:src='content_box_9.icon_partner3')
+    section
+      subsection-1
+        img(:src='content_box_11.image_director')
+        .text-director(v-html="content_box_11.text_director")
+      subsection-2
+        .title(v-html="content_box_11.text_title" )
+        .subtitle.s1(v-html="content_box_11.text_subtitle1" )
+        .subtitle.s2(v-html="content_box_11.text_subtitle2" )
+        section-form
+          include ../assets/pug/form_box11
+
 </template>
 
 <script>
@@ -122,7 +140,7 @@ export default {
     const content_tabs = computed(() => store.getters.getTabs);
 
 
-    console.log("******** >>>> ", content_tabs.value)
+    // console.log("******** >>>> ", content_tabs.value)
     const icon_tab = require('@/assets/images/lenta_a.png');
     return { content_box_1,
       content_box_2,
@@ -441,8 +459,95 @@ export default {
   background-color: #F6F6F6;
   width: 100%;
   height: 763px;
+  section-1 {
+    .title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 52px;
+      margin-bottom: 25px;
+      padding-top: 77px;
+    }
+    .subtitle {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 36px;
+      margin-bottom: 52px;
+      color: #213252;
+    }
+  }
+  section-2 {
+    display: flex;
+    justify-content: space-between;
+    //img:nth-last-child {
+    //  padding-right: 12px;
+    //}
+
+  }
+
 }
 .box-11 {
   height: 916px;
+  section {
+    display: flex;
+    subsection-1 {
+      position: relative;
+      z-index: 1;
+      img {
+        margin-left: -340px;
+        margin-top: 53px;
+      }
+      .text-director {
+        background-color: #ffffff;
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        border: 1px solid #DBE1E4;
+        border-radius: 8px;
+        position: absolute;
+        z-index: 99;
+        bottom: 40px;
+      }
+    }
+    subsection-2 {
+      position: absolute;
+
+      .title {
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 32px;
+        position: absolute;
+        z-index: 99;
+        left: 620px;
+        top: 225px;
+        //margin-bottom: 24px;
+        width: 575px;
+      }
+      .subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        position: absolute;
+        right: 300px;
+        width: 613px;
+        z-index: 99;
+      }
+      .s1 {
+        top: 380px;
+        left: 620px;
+      }
+      .s2 {
+        top: 475px;
+        left: 620px;
+      }
+      section-form {
+        position: absolute;
+        z-index: 99;
+        top: 640px;
+        left: 520px;
+      }
+    }
+
+  }
 }
 </style>
