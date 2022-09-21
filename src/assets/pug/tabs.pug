@@ -71,8 +71,11 @@
             .tab-right-side
                 .section-1
                     .title-side {{ content_tabs.tab_4.text_side }}
-                    ul
-                        li(v-for="item in content_tabs.tab_4.list_side" :key="index") {{ item }}
+                    lists
+                        ul
+                            li(v-for="item in content_tabs.tab_4.list1_side" :key="index") {{ item }}
+                        ul
+                            li(v-for="item in content_tabs.tab_4.list2_side" :key="index") {{ item }}
                 .section-2
                     button.btn.btn-home-tab {{ content_box_2.text_btn }}
     #content-5.tab-h
@@ -82,8 +85,26 @@
             .tab-right-side
                 .section-1
                     .title-side {{ content_tabs.tab_5.text_side }}
-                    ul
-                        li(v-for="item in content_tabs.tab_5.list_side" :key="index") {{ item }}
+                    //ul
+                    //    li(v-for="item in content_tabs.tab_5.list_side" :key="index") {{ item }}
+                    lists1
+                       list-m
+                        .title-side5 {{ content_tabs.tab_5.text1_side }}
+                        ul
+                            li(v-for="item in content_tabs.tab_5.list1_side" :key="index") {{ item }}
+                       list-m
+                        .title-side5 {{ content_tabs.tab_5.text2_side }}
+                        ul
+                            li(v-for="item in content_tabs.tab_5.list2_side" :key="index") {{ item }}
+                    lists2
+                        list-m
+                            .title-side5 {{ content_tabs.tab_5.text3_side }}
+                            ul
+                                li(v-for="item in content_tabs.tab_5.list3_side" :key="index") {{ item }}
+                        list-m
+                            .title-side5 {{ content_tabs.tab_5.text4_side }}
+                            ul
+                                li(v-for="item in content_tabs.tab_5.list4_side" :key="index") {{ item }}
                 .section-2
                     button.btn.btn-home-tab {{ content_box_2.text_btn }}
     #content-6.tab-h

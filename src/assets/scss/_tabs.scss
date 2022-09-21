@@ -55,6 +55,8 @@
 
 //============================================
 
+
+
 #content-1,
 #content-2,
 #content-3,
@@ -100,6 +102,24 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 36px;
+  }
+  .title-side5{
+    margin-top: 40px;
+    margin-left: 63px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  lists {
+    display: flex;
+  }
+  lists1 {
+    display: flex;
+    margin-top: -115px;
+  }
+  lists2 {
+    display: flex;
+    margin-top: -40px;
   }
   ul {
     margin-top: 18px;
