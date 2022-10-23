@@ -1,6 +1,14 @@
 <template lang="pug">
-.wrapper
-  .box-1
+//.wrapper
+.box-1
+  .wrapper(v-if="isDesktop")
+    .section_left
+      .text-top {{ content_box_1.text_top }}
+      .text-bottom {{ content_box_1.text_bottom }}
+      button.btn.btn-home {{ content_box_1.text_btn }}
+    .section_right
+      img(:src='content_box_1.image')
+  .wrapper-m(v-if="isMobile")
     .section_left
       .text-top {{ content_box_1.text_top }}
       .text-bottom {{ content_box_1.text_bottom }}
@@ -138,6 +146,8 @@ export default {
     const content_box_10 = computed(() => store.getters.getHomePageBox_10);
     const content_box_11 = computed(() => store.getters.getHomePageBox_11);
     const content_tabs = computed(() => store.getters.getTabs);
+    const isMobile = computed(() => store.getters.getIsMobile);
+    const isDesktop = computed(() => store.getters.getIsDesktop);
 
 
     // console.log("******** >>>> ", content_tabs.value)
@@ -153,7 +163,9 @@ export default {
       content_box_9,
       content_box_10,
       content_box_11,
-      content_tabs
+      content_tabs,
+      isMobile,
+      isDesktop
     }
   }
 }
