@@ -1,6 +1,6 @@
 <template lang="pug">
-h3(v-if="isDesktop") Десктопная версия
-h3(v-if="isMobile") Мобильная версия
+h3(v-if="isDesktop" style="color:blue") Десктопная версия
+h3(v-if="isMobile" style="color:red") Мобильная версия
 .wrapper
   //.wrapper(v-if="isDesktop")
   .box-1(v-if="isDesktop")
@@ -21,18 +21,30 @@ h3(v-if="isMobile") Мобильная версия
      //
 hr
 .wrapper
-  .box-2
+  .box-2(v-if="isDesktop")
     .text-top(v-html="content_box_2.text_top" )
     .text-bottom {{ content_box_2.text_bottom }}
     .text-title-tab {{ content_box_2.text_title_tab }}
     include ../assets/pug/tabs
-.box-3
+  .box-2-m(v-if="isMobile")
+    .text-top(v-html="content_box_2.text_top" )
+    .text-bottom {{ content_box_2.text_bottom }}
+    .text-title-tab {{ content_box_2.text_title_tab }}
+    include ../assets/pug/tabs
+.box-3(v-if="isDesktop")
   .wrapper
     .seed
       .seed-1
         include ../assets/pug/form_box3
       .seed-2
         img(:src='content_box_3.form_image')
+.box-3-m(v-if="isMobile")
+  .wrapper
+    .seed
+      .seed-1
+        include ../assets/pug/form_box3_m
+      //.seed-2
+      //  img(:src='content_box_3.form_image')
 .box-4
   .wrapper
     .text-title {{ content_box_4.text_title }}
