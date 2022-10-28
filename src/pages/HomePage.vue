@@ -76,7 +76,7 @@ hr
 
       .right-box
         .sklad-info
-          img(width="280" :src='content_box_4.right_section.image')
+          img(width="290" :src='content_box_4.right_section.image')
           .ssdd
             .text-sklad(v-html="content_box_4.right_section.title")
 //====================== 5 ===============================
@@ -85,10 +85,10 @@ hr
     .layout
       img(:src='content_box_5.image_fon')
       .text-title(v-html="content_box_5.title" )
-.box-5(v-if="isMobile")
+.box-5-m(v-if="isMobile")
   .wrapper
     .layout
-      img(:src='content_box_5.image_fon')
+      img(width="340" :src='content_box_5.image_fon_m')
       .text-title(v-html="content_box_5.title" )
 //====================== 6 ===============================
 .box-6
@@ -191,9 +191,7 @@ export default {
     const isMobile = computed(() => store.getters.getIsMobile);
     const isDesktop = computed(() => store.getters.getIsDesktop);
 
-
-    // console.log("******** >>>> ", content_tabs.value)
-    const icon_tab = require('@/assets/images/lenta_a.png');
+    //const icon_tab = require('@/assets/images/lenta_a.png');
     return { content_box_1,
       content_box_2,
       content_box_3,
@@ -215,77 +213,6 @@ export default {
 
 <style lang="scss" scoped>
 
-//.box-4 {
-//  .text-title {
-//    font-size: 40px;
-//    font-weight: 600;
-//    line-height: 52px;
-//    color: #213252;
-//    margin-top: 161px;
-//    margin-bottom: 25px;
-//  }
-//  .text-subtitle{
-//    font-size: 24px;
-//    font-weight: 400;
-//    line-height: 36px;
-//    color: #213252;
-//    margin-bottom: 60px;
-//  }
-//  .section-sklad {
-//    display: flex;
-//    justify-content: space-between;
-//    .list-sklad {
-//      display: flex;
-//      align-items: center;
-//      //justify-content: center;
-//      img {
-//        width: 192px;
-//        margin-bottom: 25px;
-//        margin-right: 40px;
-//      }
-//      p {
-//        margin-top: -20px;
-//      }
-//    }
-//  }
-//  .right-box {
-//    .sklad-info  {
-//      position: relative;
-//      .ssdd {
-//        bottom: 0;
-//        position: absolute;
-//        background-color: #211D1D;
-//        height: 90px;
-//        width: 100%;
-//        .text-sklad {
-//          margin-left: 50px;
-//          margin-top: 17px;
-//          color: #ffffff;
-//          font-weight: 400;
-//          font-size: 18px;
-//          line-height: 28px;
-//        }
-//      }
-//    }
-//  }
-//}
-.box-5 {
-  margin: 175px 0;
-  .layout {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .text-title {
-      position: absolute;
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 52px;
-      text-align: center;
-      color: #ffffff;
-    }
-  }
-}
 .box-6 {
   .section-info {
     display: flex;

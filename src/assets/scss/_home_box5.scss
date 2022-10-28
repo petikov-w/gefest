@@ -1,0 +1,38 @@
+.box-5 {
+  margin: 175px 0;
+  .layout {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .text-title {
+      position: absolute;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 52px;
+      text-align: center;
+      color: #ffffff;
+      max-width: 833px;
+    }
+  }
+}
+
+.box-5-m {
+  margin-top: 75px;
+  .layout {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    .text-title {
+      position: absolute;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 32px;
+      text-align: center;
+      color: #ffffff;
+      max-width: 270px;
+    }
+  }
+}
