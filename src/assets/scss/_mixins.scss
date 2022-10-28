@@ -19,3 +19,13 @@
   @if $fon=='light' {color: #213252;}
   @else if $fon=='dark' { color: #ffffff;}
 }
+
+@mixin font_label_form_m($fon:"dark") {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  @if $fon=='light' {color: #213252;}
+  @else if $fon=='dark' { color: #ffffff;}
+}

@@ -2,33 +2,33 @@
     form()
         .form-title(v-html="content_box_3.form_title")
         .input-box
-            label.box3.mb10(for='email') {{ content_box_3.form_labels.email}}
-            input#email(
+            label.box3-m.mt10(for='email') {{ content_box_3.form_labels.email}}
+            input#email.im(
                 required
                 name="email"
                 :placeholder="content_box_3.form_placeholders.email"
             )
         .input-box
-            label.box3.mb10(for='company') {{ content_box_3.form_labels.company }}
+            label.box3-m.mt10(for='company') {{ content_box_3.form_labels.company }}
             input#company(
                 required
                 name="company"
                 :placeholder="content_box_3.form_placeholders.company"
             )
         .input-box
-            label.box3.mb10(for='name') {{ content_box_3.form_labels.name }}
+            label.box3-m.mt10(for='name') {{ content_box_3.form_labels.name }}
             input#name(
                 required
                 name="name"
                 :placeholder="content_box_3.form_placeholders.name"
             )
         .input-box
-            label.box3.mb10(for='telefon') {{ content_box_3.form_labels.telefon }}
+            label.box3-m.mt10(for='telefon') {{ content_box_3.form_labels.telefon }}
             input#telefon(
                 required
                 name="telefon"
                 :placeholder="content_box_3.form_placeholders.telefon"
             )
         .form-subtitle {{ content_box_3.form_subtitle }}
-        button.btn.btn-home-box3 {{ content_box_3.text_btn }}
+        button.btn.btn-home-box3-m {{ content_box_3.text_btn }}
         .form-policy(v-html="content_box_3.text_policy")

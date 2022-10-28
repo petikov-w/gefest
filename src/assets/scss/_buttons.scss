@@ -24,6 +24,11 @@
             padding: 21px 129px;
             margin-bottom: 20px;
         }
+        &-box3-m {
+            @include font_btn_forms;
+            padding: 17px 78px;
+            //margin-bottom: 20px;
+        }
         &-box7 {
             @include font_btn_forms;
             padding: 21px 84px;

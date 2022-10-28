@@ -1,8 +1,8 @@
 <template lang="pug">
 h3(v-if="isDesktop" style="color:blue") Десктопная версия
 h3(v-if="isMobile" style="color:red") Мобильная версия
+//====================== 1 ===============================
 .wrapper
-  //.wrapper(v-if="isDesktop")
   .box-1(v-if="isDesktop")
     .section_left
       .text-top {{ content_box_1.text_top }}
@@ -10,7 +10,6 @@ h3(v-if="isMobile" style="color:red") Мобильная версия
       button.btn.btn-home {{ content_box_1.text_btn }}
     .section_right
       img(:src='content_box_1.image')
-  //.wrapper-m(v-if="isMobile")
   .box-1-m(v-if="isMobile")
     .section_left
       .text-top {{ content_box_1.text_top }}
@@ -20,6 +19,7 @@ h3(v-if="isMobile" style="color:red") Мобильная версия
     //.section_right
      //
 hr
+//====================== 2 ===============================
 .wrapper
   .box-2(v-if="isDesktop")
     .text-top(v-html="content_box_2.text_top" )
@@ -31,6 +31,7 @@ hr
     .text-bottom {{ content_box_2.text_bottom }}
     .text-title-tab {{ content_box_2.text_title_tab }}
     include ../assets/pug/tabs
+//====================== 3 ===============================
 .box-3(v-if="isDesktop")
   .wrapper
     .seed
@@ -45,7 +46,8 @@ hr
         include ../assets/pug/form_box3_m
       //.seed-2
       //  img(:src='content_box_3.form_image')
-.box-4
+//====================== 4 ===============================
+.box-4(v-if="isDesktop")
   .wrapper
     .text-title {{ content_box_4.text_title }}
     .text-subtitle {{ content_box_4.text_subtitle }}
@@ -61,11 +63,34 @@ hr
           img(:src='content_box_4.right_section.image')
           .ssdd
             .text-sklad(v-html="content_box_4.right_section.title")
-.box-5
+.box-4-m(v-if="isMobile")
+  .wrapper
+    .text-title-m {{ content_box_4.text_title }}
+    .text-subtitle-m {{ content_box_4.text_subtitle }}
+    .section-sklad
+      .left-box
+        div(v-for="(item, index) in content_box_4.left_section" :key="index")
+          .list-sklad
+            img(width="125" :src='content_box_4.left_section[index].image')
+            p(v-html="content_box_4.left_section[index].title" )
+
+      .right-box
+        .sklad-info
+          img(width="280" :src='content_box_4.right_section.image')
+          .ssdd
+            .text-sklad(v-html="content_box_4.right_section.title")
+//====================== 5 ===============================
+.box-5(v-if="isDesktop")
   .wrapper
     .layout
       img(:src='content_box_5.image_fon')
       .text-title(v-html="content_box_5.title" )
+.box-5(v-if="isMobile")
+  .wrapper
+    .layout
+      img(:src='content_box_5.image_fon')
+      .text-title(v-html="content_box_5.title" )
+//====================== 6 ===============================
 .box-6
   .wrapper
     div(v-for="(item, index) in content_box_6" :key="index")
@@ -80,6 +105,7 @@ hr
           sec(v-else)
             .section-title(v-html="content_box_6[index].title" )
             .section-text(v-html="content_box_6[index].text" )
+//====================== 7 ===============================
 .box-7
   .wrapper
     sections
@@ -188,129 +214,61 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//.box-1 {
-//  display: flex;
-//  .section_left {
-//    padding-top: 160px;
-//    padding-bottom: 187px;
-//    width: 45%;
-//    .text-top {
-//      font-weight: 600;
-//      font-size: 37px;
-//      line-height: 56px;
-//      margin-bottom: 45px;
-//    }
-//    .text-bottom{
-//      font-weight: 400;
-//      font-size: 22px;
-//      line-height: 36px;
-//      margin-bottom: 73px;
-//    }
-//  }
-//  .section_right {
-//    width: 55%;
-//    img {
-//      margin-top: 30px;
-//      height: 727px;
-//      width: 1038px;
-//    }
-//  }
-//}
-//.box-2 {
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: flex-start;
-//  .text-top {
-//    margin-top: 100px;
-//    margin-bottom: 15px;
+
+//.box-4 {
+//  .text-title {
+//    font-size: 40px;
 //    font-weight: 600;
-//    font-size: 37px;
-//    line-height: 56px;
-//
+//    line-height: 52px;
+//    color: #213252;
+//    margin-top: 161px;
+//    margin-bottom: 25px;
 //  }
-//  .text-bottom {
-//    margin-bottom: 55px;
+//  .text-subtitle{
+//    font-size: 24px;
 //    font-weight: 400;
-//    font-size: 24px;
 //    line-height: 36px;
+//    color: #213252;
+//    margin-bottom: 60px;
 //  }
-//  .text-title-tab {
-//    margin-bottom: 35px;
-//    font-weight: 600;
-//    font-size: 24px;
-//    line-height: 36px;
-//
-//  }
-//}
-//.box-3 {
-//  background-color: #1A2C41;
-//  width: 100%;
-//  height: 680px;
-//  .seed {
+//  .section-sklad {
 //    display: flex;
-//    .seed-1 {
-//    }
-//    .seed-2 {
+//    justify-content: space-between;
+//    .list-sklad {
+//      display: flex;
+//      align-items: center;
+//      //justify-content: center;
 //      img {
-//        margin-top: -53px;
+//        width: 192px;
+//        margin-bottom: 25px;
+//        margin-right: 40px;
+//      }
+//      p {
+//        margin-top: -20px;
+//      }
+//    }
+//  }
+//  .right-box {
+//    .sklad-info  {
+//      position: relative;
+//      .ssdd {
+//        bottom: 0;
+//        position: absolute;
+//        background-color: #211D1D;
+//        height: 90px;
+//        width: 100%;
+//        .text-sklad {
+//          margin-left: 50px;
+//          margin-top: 17px;
+//          color: #ffffff;
+//          font-weight: 400;
+//          font-size: 18px;
+//          line-height: 28px;
+//        }
 //      }
 //    }
 //  }
 //}
-.box-4 {
-  .text-title {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 52px;
-    color: #213252;
-    margin-top: 161px;
-    margin-bottom: 25px;
-  }
-  .text-subtitle{
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 36px;
-    color: #213252;
-    margin-bottom: 60px;
-  }
-  .section-sklad {
-    display: flex;
-    justify-content: space-between;
-    .list-sklad {
-      display: flex;
-      align-items: center;
-      //justify-content: center;
-      img {
-        width: 192px;
-        margin-bottom: 25px;
-        margin-right: 40px;
-      }
-      p {
-        margin-top: -20px;
-      }
-    }
-  }
-  .right-box {
-    .sklad-info  {
-      position: relative;
-      .ssdd {
-        bottom: 0;
-        position: absolute;
-        background-color: #211D1D;
-        height: 90px;
-        width: 100%;
-        .text-sklad {
-          margin-left: 50px;
-          margin-top: 17px;
-          color: #ffffff;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 28px;
-        }
-      }
-    }
-  }
-}
 .box-5 {
   margin: 175px 0;
   .layout {
