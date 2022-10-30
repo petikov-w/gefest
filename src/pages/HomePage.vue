@@ -91,7 +91,7 @@ hr
       img(width="340" :src='content_box_5.image_fon_m')
       .text-title(v-html="content_box_5.title" )
 //====================== 6 ===============================
-.box-6
+.box-6(v-if="isDesktop")
   .wrapper
     div(v-for="(item, index) in content_box_6" :key="index")
       .section-info
@@ -105,6 +105,14 @@ hr
           sec(v-else)
             .section-title(v-html="content_box_6[index].title" )
             .section-text(v-html="content_box_6[index].text" )
+.box-6-m(v-if="isMobile")
+  .wrapper
+    div(v-for="(item, index) in content_box_6" :key="index")
+      .section-info
+        .left
+          .section-title(v-html="content_box_6[index].title" )
+          .section-text(v-html="content_box_6[index].text" )
+          img(:src='content_box_6[index].image')
 //====================== 7 ===============================
 .box-7
   .wrapper
@@ -117,7 +125,8 @@ hr
         img(:src='content_box_7.image')
       section-form
         include ../assets/pug/form_box7
-.box-8
+//====================== 8 ===============================
+.box-8(v-if="isDesktop")
   .wrapper
     .title-1 {{ content_box_8.text_title_1 }}
     section
@@ -127,8 +136,17 @@ hr
       subsection-2
         img(:src='content_box_8.image')
         img(:src='content_box_8.icon')
+.box-8-m(v-if="isMobile")
+  //.wrapper
+  .title-1 {{ content_box_8.text_title_1 }}
+  .title-2 {{ content_box_8.text_title_2 }}
+  .text(v-html="content_box_8.text" )
+  subsection-2
+   img.i1(:src='content_box_8.image')
+   img.i2(:src='content_box_8.icon')
 hr
-.box-9
+//====================== 9 ===============================
+.box-9(v-if="isDesktop")
   .wrapper
     section
       subsection
@@ -141,6 +159,19 @@ hr
        subsection-4
         img(:src='content_box_9.icon_partner3')
         img(:src='content_box_9.icon_partner4')
+.box-9-m(v-if="isMobile")
+  section
+    subsection
+      .title-2 {{ content_box_9.text_title }}
+      .text(v-html="content_box_9.text" )
+    subsection-2
+      subsection-3
+        img(:src='content_box_9.icon_partner1')
+        img(:src='content_box_9.icon_partner2')
+      subsection-4
+        img(:src='content_box_9.icon_partner3')
+        img(:src='content_box_9.icon_partner4')
+//====================== 10 ===============================
 .box-10
   .wrapper
     section-1
@@ -151,6 +182,7 @@ hr
       img(:src='content_box_10.image_doc2')
       img(:src='content_box_10.image_doc3')
       img(:src='content_box_10.image_doc4')
+//====================== 11 ===============================
 .box-11
   .wrapper
     section
@@ -213,28 +245,28 @@ export default {
 
 <style lang="scss" scoped>
 
-.box-6 {
-  .section-info {
-    display: flex;
-    font-weight: 400;
-    align-items: center;
-    margin-bottom: 20px;
-    .section-title {
-      font-size: 22px;
-      line-height: 32px;
-      margin-bottom: 35px;
-      max-width: 508px;
-    }
-    .section-text {
-      font-size: 16px;
-      line-height: 24px;
-      max-width: 508px;
-    }
-    .left, .right {
-      width: 50%;
-    }
-  }
-}
+//.box-6 {
+//  .section-info {
+//    display: flex;
+//    font-weight: 400;
+//    align-items: center;
+//    margin-bottom: 20px;
+//    .section-title {
+//      font-size: 22px;
+//      line-height: 32px;
+//      margin-bottom: 35px;
+//      max-width: 508px;
+//    }
+//    .section-text {
+//      font-size: 16px;
+//      line-height: 24px;
+//      max-width: 508px;
+//    }
+//    .left, .right {
+//      width: 50%;
+//    }
+//  }
+//}
 .box-7 {
   background-color: #F6F6F6;
   width: 100%;
@@ -292,50 +324,47 @@ export default {
     width: 41%;
   }
 }
-.box-8 {
-  color: #213252;
-  .title-1 {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 52px;
-    margin-top: 125px;
-    margin-bottom: 86px;
-  }
-  .title-2 {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 32px;
-    margin-bottom: 24px;
-  }
-  .text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-  }
-
-  section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    margin-bottom: 120px;
-  }
-  subsection {
-    width: 50%;
-  }
-  subsection-2 {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      position: absolute;
-    }
-  }
-
-
-
-}
+//.box-8 {
+//  color: #213252;
+//  .title-1 {
+//    font-size: 40px;
+//    font-weight: 600;
+//    line-height: 52px;
+//    margin-top: 125px;
+//    margin-bottom: 86px;
+//  }
+//  .title-2 {
+//    font-size: 22px;
+//    font-weight: 600;
+//    line-height: 32px;
+//    margin-bottom: 24px;
+//  }
+//  .text {
+//    font-size: 18px;
+//    font-weight: 400;
+//    line-height: 30px;
+//  }
+//
+//  section {
+//    display: flex;
+//    justify-content: space-between;
+//    align-items: center;
+//    position: relative;
+//    margin-bottom: 120px;
+//  }
+//  subsection {
+//    width: 50%;
+//  }
+//  subsection-2 {
+//    width: 50%;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    img {
+//      position: absolute;
+//    }
+//  }
+//}
 .box-9 {
    section {
      display: flex;
