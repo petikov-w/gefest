@@ -29,3 +29,25 @@
   @if $fon=='light' {color: #213252;}
   @else if $fon=='dark' { color: #ffffff;}
 }
+
+// Установки для текста в Мобильной версии
+
+@mixin text_18_24() {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  //margin-top: 20px;
+  //margin-bottom: 10px;
+  //@if $fon=='light' {color: #213252;}
+  //@else if $fon=='dark' { color: #ffffff;}
+}
+
+@mixin text_12_20() {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  //margin-top: 20px;
+  //margin-bottom: 10px;
+  //@if $fon=='light' {color: #213252;}
+  //@else if $fon=='dark' { color: #ffffff;}
+}

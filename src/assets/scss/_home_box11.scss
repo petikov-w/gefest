@@ -1,0 +1,130 @@
+.box-11 {
+  height: 916px;
+  section {
+    display: flex;
+    subsection-1 {
+      position: relative;
+      z-index: 1;
+      img {
+        margin-left: -340px;
+        margin-top: 53px;
+      }
+      .text-director {
+        background-color: #ffffff;
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        border: 1px solid #DBE1E4;
+        border-radius: 8px;
+        position: absolute;
+        z-index: 99;
+        bottom: 40px;
+      }
+    }
+    subsection-2 {
+      position: absolute;
+
+      .title {
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 32px;
+        position: absolute;
+        z-index: 99;
+        left: 620px;
+        top: 225px;
+        //margin-bottom: 24px;
+        width: 575px;
+      }
+      .subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        position: absolute;
+        right: 300px;
+        width: 613px;
+        z-index: 99;
+      }
+      .s1 {
+        top: 380px;
+        left: 620px;
+      }
+      .s2 {
+        top: 475px;
+        left: 620px;
+      }
+      section-form {
+        position: absolute;
+        z-index: 99;
+        top: 640px;
+        left: 520px;
+      }
+    }
+
+  }
+}
+.box-11-m {
+  height: 916px;
+  section {
+    display: flex;
+    subsection-1 {
+      position: relative;
+      z-index: 1;
+      img {
+        margin-left: -340px;
+        margin-top: 53px;
+      }
+      .text-director {
+        background-color: #ffffff;
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        border: 1px solid #DBE1E4;
+        border-radius: 8px;
+        position: absolute;
+        z-index: 99;
+        bottom: 40px;
+      }
+    }
+    subsection-2 {
+      position: absolute;
+
+      .title {
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 32px;
+        position: absolute;
+        z-index: 99;
+        left: 620px;
+        top: 225px;
+        //margin-bottom: 24px;
+        width: 575px;
+      }
+      .subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        position: absolute;
+        right: 300px;
+        width: 613px;
+        z-index: 99;
+      }
+      .s1 {
+        top: 380px;
+        left: 620px;
+      }
+      .s2 {
+        top: 475px;
+        left: 620px;
+      }
+      section-form {
+        position: absolute;
+        z-index: 99;
+        top: 640px;
+        left: 520px;
+      }
+    }
+
+  }
+}
