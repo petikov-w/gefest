@@ -1,0 +1,143 @@
+//form {
+//  input {
+//    height: 57px;
+//    width: 298px;
+//    border-radius: 4px;
+//    padding-left: 10px;
+//    border:1px solid #CDD6DB;
+//    outline: 0;
+//    &::placeholder {
+//      font-size: 16px;
+//      font-weight: 400;
+//      line-height: 28px;
+//      color: #65677C;
+//    }
+//  }
+
+
+
+
+.box3 {
+  @include font_label_form("dark")
+}
+.box3-m {
+  @include font_label_form_m("dark")
+}
+
+.box3-form {
+  form {
+    input {
+      height: 57px;
+      width: 298px;
+      border-radius: 4px;
+      padding-left: 10px;
+      border: 1px solid #CDD6DB;
+      outline: 0;
+
+      &::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #65677C;
+      }
+    }
+
+    .form {
+      &-title,
+      &-subtitle,
+      &-policy {
+        color: #ffffff;
+      }
+
+      &-title {
+        padding-top: 20px;
+        //padding-top: 76px;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 52px;
+        // margin-bottom: 35px;
+      }
+
+      &-subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
+
+      &-policy {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 16px;
+        max-width: 400px;
+      }
+    }
+  }
+}
+.box3-form-m {
+  margin-left: 8vw;
+  width: 80vw;
+
+  form {
+    input {
+      height: 46px;
+      width: 272px;
+      border-radius: 4px;
+      padding-left: 10px;
+      border: 1px solid #CDD6DB;
+      outline: 0;
+
+      &::placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #65677C;
+      }
+    }
+  }
+
+  .form {
+    margin-left: 20px;
+    //width: 80vw;
+    &-title,
+    &-subtitle,
+    &-policy {
+      color: #ffffff;
+    }
+
+    &-title {
+      //padding-top: 76px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 30px;
+      //margin-bottom: 35px;
+    }
+
+    &-subtitle {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      //margin-top: 20px;
+      margin: 20px 0;
+      //max-width: 360px;
+    }
+
+    &-policy {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      margin-top: 15px;
+      //max-width: 80vw;
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

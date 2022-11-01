@@ -41,9 +41,10 @@ hr
         img(:src='content_box_3.form_image')
 .box-3-m(v-if="isMobile")
   .wrapper
-    .seed
-      .seed-1
-        include ../assets/pug/form_box3_m
+    include ../assets/pug/form_box3_m
+    //.seed
+    //  .seed-1
+    //    include ../assets/pug/form_box3_m
       //.seed-2
       //  img(:src='content_box_3.form_image')
 //====================== 4 ===============================
