@@ -222,18 +222,29 @@ hr
         .subtitle.s2(v-html="content_box_11.text_subtitle2" )
         section-form
           include ../assets/pug/form_box11
-.box-11(v-if="isMobile")
-  .wrapper
-    section
-      subsection-1
-        img(:src='content_box_11.image_director')
-        .text-director(v-html="content_box_11.text_director")
-      subsection-2
-        .title(v-html="content_box_11.text_title" )
-        .subtitle.s1(v-html="content_box_11.text_subtitle1" )
-        .subtitle.s2(v-html="content_box_11.text_subtitle2" )
-        section-form
-          include ../assets/pug/form_box11
+.box-11-m(v-if="isMobile")
+  //.wrapper
+  section
+    //subsection-2
+    .title(v-html="content_box_11.text_title" )
+    .subtitle.s1(v-html="content_box_11.text_subtitle1" )
+    .subtitle.s2(v-html="content_box_11.text_subtitle2" )
+    img.mis(:src='content_box_11.image_director')
+    .text-director(v-html="content_box_11.text_director")
+    //subsection-1
+    //  img.mis(:src='content_box_11.image_director')
+    //  .text-director(v-html="content_box_11.text_director")
+    section-form
+      include ../assets/pug/form_box11
+    //subsection-1
+    //  img(:src='content_box_11.image_director')
+    //  .text-director(v-html="content_box_11.text_director")
+    //subsection-2
+    //  .title(v-html="content_box_11.text_title" )
+    //  .subtitle.s1(v-html="content_box_11.text_subtitle1" )
+    //  .subtitle.s2(v-html="content_box_11.text_subtitle2" )
+    //  section-form
+    //    include ../assets/pug/form_box11
 
 </template>
 

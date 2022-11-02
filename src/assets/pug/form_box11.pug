@@ -1,7 +1,17 @@
-.box11-form
+.box11-form(v-if="isDesktop")
     .form-title(v-html="content_box_11.form_text")
     form()
         .input-box2
+            input.input-box11(
+                required
+                name="telefon"
+                :placeholder="content_box_11.form_input_placeholder"
+            )
+            button.btn.btn-home-box11 {{ content_box_11.form_text_button }}
+.box11-form-m(v-if="isMobile")
+    .form-title(v-html="content_box_11.form_text")
+    form()
+        .input-box2-m
             input.input-box11(
                 required
                 name="telefon"
