@@ -134,7 +134,7 @@ hr
         .text1(v-html="content_box_7.text1")
         //
         include ../assets/pug/form_box7
-        img.mis(:src='content_box_7.image')
+        img.mis(:src='content_box_7.image_m')
         .text2(v-html="content_box_7.text2")
       //section-form
 
@@ -229,7 +229,7 @@ hr
     .title(v-html="content_box_11.text_title" )
     .subtitle.s1(v-html="content_box_11.text_subtitle1" )
     .subtitle.s2(v-html="content_box_11.text_subtitle2" )
-    img.mis(:src='content_box_11.image_director')
+    img.mis(:src='content_box_11.image_director_m')
     .text-director(v-html="content_box_11.text_director")
     //subsection-1
     //  img.mis(:src='content_box_11.image_director')

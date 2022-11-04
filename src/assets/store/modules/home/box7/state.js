@@ -1,9 +1,10 @@
 export default {
     home_page_box_7: {
         image: require('@/assets/images/form_box7.png'),
-        title: "Давайте обсудим<br>" +
-                 " ваш проект и<br>" +
-                 " подготовим его<br> расчет",
+        image_m: require('@/assets/images/form_box7_m.png'),
+        title: "Давайте обсудим" +
+                 " ваш проект и" +
+                 " подготовим его расчет",
         // text1: "Мы рассчитаем точную стоимость<br>" +
         //         " в течение 24 часов, подскажем,<br>" +
         //         " на чем вы можете сэкономить<br>" +

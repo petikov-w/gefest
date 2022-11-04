@@ -48,5 +48,13 @@
         line-height: 22px;
         width: 340px;
         //margin-bottom: -100px;
+        &-box11 {
+            @include font_btn_forms;
+            padding: 20px 92px;
+            margin-top: 15px;
+            //max-width: 65vw;
+            border-radius: 4px;
+
+        }
     }
 }

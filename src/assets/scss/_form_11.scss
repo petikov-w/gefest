@@ -8,14 +8,15 @@
 .input-box2-m {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  width: auto;
+  align-items: center;
+  //width: auto;
 }
 
 .input-box11 {
   //background-color: #65677C;
   /* top left, top right, bottom right, bottom left */
   border-radius: 4px 0 0 4px;
+
 }
 
 
@@ -57,15 +58,16 @@
 .box11-form-m {
   background-color: #1A2C41;
   color: #ffffff;
-  padding: 28px 104px 40px 104px;
+  padding: 35px 5px 70px 5px;
   border-radius: 4px ;
-
-  //top: 50px;
-  //position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -40px;
   form {
     input {
       height: 57px;
-      width: 298px;
+      width: 286px;
       border-radius: 4px;
       padding-left: 10px;
       border: 1px solid #CDD6DB;
@@ -81,21 +83,12 @@
   }
   .form {
     &-title {
-      width: 504px;
+      width: 286px;
       margin-bottom: 25px;
-      font-weight: 400;
-
+      @include text_14_24;
     }
   }
 }
-
-//.box-11-m {
-//  width: 110%;
-//  section {
-//    display: flex;
-//    flex-direction: column;
-//  }
-//}
 
 
 
