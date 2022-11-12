@@ -22,12 +22,15 @@
 }
 
 .box-6-m {
+  width: 100vw;
   .section-info {
     display: flex;
     font-weight: 400;
     align-items: center;
     margin-bottom: 20px;
-    max-width: 360px;
+    padding: 10px 30px;
+    //max-width: 360px;
+    width: 80vw;
     .section-title {
       font-size: 18px;
       line-height: 22px;
@@ -40,7 +43,8 @@
       margin-bottom: 40px;
     }
     img {
-      max-width: 360px;
+      //max-width: 360px;
+      width: 80vw;
       margin-bottom: -30px;
     }
   }

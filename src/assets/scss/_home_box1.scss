@@ -28,21 +28,21 @@
 }
 .box-1-m {
   display: flex;
-  max-width: 380px;
+  //max-width: 380px;
   .section_left {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    width: 90%;
+    padding: 30px 20px;
+    width: 100vw;
     .text-top {
       font-weight: 600;
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 16px;
+      line-height: 28px;
+      width: 80vw;
       margin-bottom: 15px;
     }
     .text-bottom{
       font-weight: 400;
-      font-size: 18px;
-      line-height: 28px;
+      font-size: 14px;
+      line-height: 24px;
       //margin-bottom: 73px;
     }
     img {

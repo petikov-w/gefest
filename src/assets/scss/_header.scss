@@ -9,12 +9,6 @@ header {
         display: flex;
         flex-direction: column;
       }
-      //&-telefon-header {
-      //  font-size: 22px;
-      //  font-weight: 600;
-      //  line-height: 27px;
-      //  letter-spacing: 0.5px;
-      //}
     }
     .order-box {
       display: flex;
@@ -24,19 +18,38 @@ header {
         margin-left: -25px;
         margin-right: 5px;
       }
-      //.call-order {
-      //  font-size: 16px;
-      //  font-weight: 400;
-      //  line-height: 19px;
-      //  color: #5284F7;
-      //  &:hover {
-      //    text-decoration: underline;
-      //    text-decoration-style: dotted;
-      //    cursor: pointer;
-      //  }
-      //}
     }
+  }
 
+  .header-box-m {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    //height: 100px;
+    width: 100vw;
+    padding: 10px 20px;
+    section-02 {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+    .call {
+      &-box {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+      }
+    }
+    .order-box {
+      display: flex;
+      justify-content: flex-end;
+      img {
+        display: inline;
+        margin-left: -25px;
+        margin-right: 5px;
+      }
+    }
   }
 
 }

@@ -24,7 +24,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 340px;
+    width: 100vw;
+    img {
+      width: 100vw;
+    }
     .text-title {
       position: absolute;
       font-size: 18px;

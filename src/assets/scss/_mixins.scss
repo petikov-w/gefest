@@ -41,15 +41,22 @@
   //@if $fon=='light' {color: #213252;}
   //@else if $fon=='dark' { color: #ffffff;}
 }
+@mixin text_16_24b() {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  //margin-top: 20px;
+  //margin-bottom: 10px;
+  //@if $fon=='light' {color: #213252;}
+  //@else if $fon=='dark' { color: #ffffff;}
+}
+
+
 
 @mixin text_14_24() {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  //margin-top: 20px;
-  //margin-bottom: 10px;
-  //@if $fon=='light' {color: #213252;}
-  //@else if $fon=='dark' { color: #ffffff;}
 }
 
 @mixin text_12_20() {

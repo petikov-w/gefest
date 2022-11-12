@@ -55,12 +55,16 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    width: 82%;
+  }
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  --swiper-navigation-size: 24px;
+  --swiper-navigation-size: 16px;
   color: dimgrey;
   font-size: 16px;
+  padding-left: -20px;
 }
 </style>

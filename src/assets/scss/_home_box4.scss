@@ -57,9 +57,10 @@
   .wrapper {
     width: 80vw;
     .text-title-m {
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 30px;
+      @include text_18_24;
+      //font-size: 18px;
+      //font-weight: 600;
+      //line-height: 30px;
       color: #213252;
       margin-top: 50px;
       margin-bottom: 25px;

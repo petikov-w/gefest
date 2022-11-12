@@ -5,6 +5,6 @@ export default {
     telefon: 79094282463,
     logo: {
         title: "GEFEST",
-        subtitle: "Производство и продажа металлопроката"
+        subtitle: "Производство и продажа<br> металлопроката"
     }
 }

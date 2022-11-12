@@ -1,6 +1,6 @@
 <template lang="pug">
 h3(v-if="isDesktop" style="color:blue") Десктопная версия
-h3(v-if="isMobile" style="color:red") Мобильная версия
+h3(v-if="isMobile" style="color:red; text-align:center; margin-bottom:-10px")  Мобильная версия
 //====================== 1 ===============================
 .wrapper
   .box-1(v-if="isDesktop")
@@ -15,7 +15,7 @@ h3(v-if="isMobile" style="color:red") Мобильная версия
       .text-top {{ content_box_1.text_top }}
       .text-bottom {{ content_box_1.text_bottom }}
       img(:src='content_box_1.image')
-      button.btn.btn-home-m {{ content_box_1.text_btn }}
+      button.btn.btn-home-box1-m {{ content_box_1.text_btn }}
     //.section_right
      //
 hr
@@ -89,7 +89,7 @@ hr
 .box-5-m(v-if="isMobile")
   .wrapper
     .layout
-      img(width="340" :src='content_box_5.image_fon_m')
+      img(:src='content_box_5.image_fon_m')
       .text-title(v-html="content_box_5.title" )
 //====================== 6 ===============================
 .box-6(v-if="isDesktop")
@@ -204,10 +204,11 @@ hr
       .title(v-html="content_box_10.text_title" )
       .subtitle(v-html="content_box_10.text_subtitle" )
     section-2
-      img(:src='content_box_10.image_doc1')
-      img(:src='content_box_10.image_doc2')
-      img(:src='content_box_10.image_doc3')
-      img(:src='content_box_10.image_doc4')
+      Slider(:list-items="content_box_10.list_doc")
+      //img(:src='content_box_10.image_doc1')
+      //img(:src='content_box_10.image_doc2')
+      //img(:src='content_box_10.image_doc3')
+      //img(:src='content_box_10.image_doc4')
 
 //====================== 11 ===============================
 .box-11(v-if="isDesktop")
@@ -251,9 +252,11 @@ hr
 <script>
 import {useStore} from 'vuex';
 import {computed} from "vue";
+import Slider from "@/components/slider";
 
 export default {
   name: "HomePage",
+  components: {Slider},
 
   setup(){
 
@@ -272,6 +275,7 @@ export default {
     const content_tabs = computed(() => store.getters.getTabs);
     const isMobile = computed(() => store.getters.getIsMobile);
     const isDesktop = computed(() => store.getters.getIsDesktop);
+    // const listDocuments = computed(() => store.getters.getHomePageBox_10.list_doc);
 
     //const icon_tab = require('@/assets/images/lenta_a.png');
     return { content_box_1,
