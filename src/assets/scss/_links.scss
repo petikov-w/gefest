@@ -6,3 +6,16 @@
      color: #ffffff;
   }
 }
+
+.security-link-m, .developer-link-m {
+  @include text_14_24;
+  color: #B0B8C1;
+  cursor: pointer;
+  text-decoration: none;
+  width: 70vw;
+  margin-left: 25px;
+  margin-bottom: 30px;
+  &:hover {
+     color: #ffffff;
+  }
+}

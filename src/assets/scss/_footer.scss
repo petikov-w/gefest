@@ -1,7 +1,7 @@
 footer {
   width: 100%;
   background-color: #121415;
-  height: 280px;
+ // height: 280px;
 
   .footer-box-top {
     display: flex;
@@ -50,5 +50,72 @@ footer {
       }
     }
   }
-
 }
+
+footer-m {
+  width: 100vw;
+  background-color: #121415;
+  .footer-box-top-m {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .footer-logo-m {
+      margin-left: 25px;
+    }
+  section-m {
+    margin-left: 25px;
+    display: flex;
+    .order-box {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 25px;
+      img {
+        display: inline;
+        margin-left: -25px;
+        margin-right: 5px;
+      }
+    }
+    }
+  }
+
+
+  .footer-box-bottom-m {
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    justify-content: space-between;
+    .security-box {
+      display: flex;
+      flex-direction: column;
+      //align-items: center;
+      //justify-content: space-between;
+      width: 54%;
+    }
+  }
+
+  .socialnet-box-m {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 21.5%;
+    margin-left: 25px;
+
+    .circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #B9C1D1;
+      }
+    }
+  }
+}
+
+
+
