@@ -1,0 +1,51 @@
+.wrapper-thank {
+  width: 1100px;
+  margin: 0 auto;
+  min-height: 95vh;
+  font-family: $font-RussoOne;
+  text-transform: uppercase;
+  padding-top: 90px;
+}
+.wrapper-thank-m {
+  //min-height: 95vh;
+  font-family: $font-RussoOne;
+  text-transform: uppercase;
+  .thenk {
+    .title {
+      margin-top: 15px;
+      text-align: center;
+      @include font(40px, 400, 50px, #EF5221);
+    }
+    .subtitle {
+      text-align: center;
+      width: 65vw;
+      @include font(20px, 400, 28px, #FFFFFF);
+      margin-bottom: 40px;
+    }
+    img {
+      width: 90%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.thenk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    margin-top: 20vh;
+    @include font(48px, 400, 58px, #EF5221);
+  }
+  .subtitle {
+    @include font(24px, 400, 28px, #FFFFFF);
+    letter-spacing: 1.1px;
+    max-width: 415px;
+    margin: 25px 0 50px;
+    //text-align: center;
+  }
+  img {
+    //width: 38%;
+  }
+}

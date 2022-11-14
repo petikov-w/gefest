@@ -5,7 +5,7 @@ header
       Logo(:is-header="true")
       button.btn.btn-header У вас уже есть поставщик?
       .call-box
-        Telefon(:tel='telefon')
+        Telefon(:tel='telefon' :is-header="true")
         .order-box
           img(src="../assets/images/icon-telefon.png")
           .call-order Заказать обратный звонок
@@ -14,7 +14,7 @@ header
       section-02
         button.btn.btn-header-m У вас уже есть поставщик?
         .call-box
-          Telefon(:tel='telefon')
+          Telefon(:tel='telefon' :is-header="true")
           .order-box
             img(src="../assets/images/icon-telefon.png")
             .call-order-m Заказать обратный звонок

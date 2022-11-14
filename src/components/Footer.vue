@@ -28,9 +28,9 @@ footer-m(v-if="isMobile")
     .footer-logo-m
       Logo(:is-header="false")
     section-m
-      button.btn.btn-header-m У вас уже есть поставщик?
+      button.btn.btn-header-mf У вас уже есть поставщик?
       .call-box
-        Telefon(:tel='telefon')
+        Telefon(:tel='telefon' :is-header="false")
         .order-box
           img(src="../assets/images/icon-telefon.png")
           .call-order-m Заказать обратный звонок
@@ -96,6 +96,12 @@ export default {
   color: #ffffff;
 }
 
-
-
+:deep(.telefon-mf) {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #ffffff;
+}
 </style>

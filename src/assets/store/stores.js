@@ -12,6 +12,8 @@ import moduleBox9 from "@/assets/store/modules/home/box9"
 import moduleBox10 from "@/assets/store/modules/home/box10"
 import moduleBox11 from "@/assets/store/modules/home/box11"
 import moduleTabs from "@/assets/store/modules/home/tabs"
+import modulePolicy from "@/assets/store/modules/policy"
+import moduleAgreement from "@/assets/store/modules/agreement"
 
 export default createStore({
     modules: {
@@ -27,7 +29,9 @@ export default createStore({
         moduleBox9,
         moduleBox10,
         moduleBox11,
-        moduleTabs
+        moduleTabs,
+        modulePolicy,
+        moduleAgreement
     }
 })
 

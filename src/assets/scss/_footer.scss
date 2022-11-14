@@ -59,8 +59,11 @@ footer-m {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    background: #121415;
+    padding-top: 55px;
     .footer-logo-m {
       margin-left: 25px;
+      margin-bottom: 15px;
     }
   section-m {
     margin-left: 25px;
@@ -69,6 +72,9 @@ footer-m {
       display: flex;
       justify-content: flex-end;
       margin-left: 25px;
+      .call-order-m {
+        font-size: 9px;
+      }
       img {
         display: inline;
         margin-left: -25px;
@@ -82,23 +88,24 @@ footer-m {
   .footer-box-bottom-m {
     display: flex;
     flex-direction: column;
-    //align-items: center;
     justify-content: space-between;
+    background: #121415;
+
     .security-box {
       display: flex;
       flex-direction: column;
-      //align-items: center;
-      //justify-content: space-between;
       width: 54%;
     }
+
   }
 
   .socialnet-box-m {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 21.5%;
-    margin-left: 25px;
+    width: 80vw;
+    //margin-left: 25px;
+    margin: 20px 0 20px 25px;
 
     .circle {
       display: flex;

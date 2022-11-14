@@ -29,8 +29,8 @@ hr
   .box-2-m(v-if="isMobile")
     .text-top(v-html="content_box_2.text_top" )
     .text-bottom {{ content_box_2.text_bottom }}
-    .text-title-tab {{ content_box_2.text_title_tab }}
-    include ../assets/pug/tabs
+    //.text-title-tab {{ content_box_2.text_title_tab }}
+    //include ../assets/pug/tabs
 //====================== 3 ===============================
 .box-3(v-if="isDesktop")
   .wrapper
@@ -194,10 +194,7 @@ hr
       .title(v-html="content_box_10.text_title" )
       .subtitle(v-html="content_box_10.text_subtitle" )
     section-2
-      img(:src='content_box_10.image_doc1')
-      img(:src='content_box_10.image_doc2')
-      img(:src='content_box_10.image_doc3')
-      img(:src='content_box_10.image_doc4')
+    Slider(:list-items="content_box_10.list_doc" :slides-view="4")
 .box-10-m(v-if="isMobile")
   .wrapper-m
     section-1
@@ -205,10 +202,6 @@ hr
       .subtitle(v-html="content_box_10.text_subtitle" )
     section-2
       Slider(:list-items="content_box_10.list_doc")
-      //img(:src='content_box_10.image_doc1')
-      //img(:src='content_box_10.image_doc2')
-      //img(:src='content_box_10.image_doc3')
-      //img(:src='content_box_10.image_doc4')
 
 //====================== 11 ===============================
 .box-11(v-if="isDesktop")
@@ -299,229 +292,4 @@ export default {
 
 <style lang="scss" scoped>
 
-//.box-7 {
-//  background-color: #F6F6F6;
-//  width: 100%;
-//  height: 763px;
-//  margin-top: 60px;
-//  sections {
-//    display: flex;
-//  }
-//  section-info {
-//    width: 31%;
-//    display: flex;
-//    flex-direction: column;
-//    .title {
-//      font-size: 42px;
-//      font-weight: 700;
-//      line-height: 50px;
-//      margin-bottom: 38px;
-//      margin-top: 88px;
-//      //position: absolute;
-//    }
-//    .text1 {
-//      font-size: 16px;
-//      font-weight: 400;
-//      line-height: 28px;
-//      //position: absolute;
-//    }
-//    .text2 {
-//      background-color: #ffffff;
-//      //width: 480px;
-//      padding: 33px 30px;
-//      font-size: 16px;
-//      font-weight: 400;
-//      line-height: 28px;
-//      border: 1px solid #DBE1E4;
-//      border-radius: 8px;
-//      position: absolute;
-//      z-index: 99;
-//      margin-top: 521px;
-//      margin-left: 110px;
-//
-//    }
-//  }
-//  section-image {
-//    width: 28%;
-//    position: relative;
-//    border-right: 1px solid #DBE1E4;
-//
-//    z-index: 1;
-//    img {
-//      margin-left: -170px;
-//    }
-//  }
-//  section-form {
-//    width: 41%;
-//  }
-//}
-
-//.box-8 {
-//  color: #213252;
-//  .title-1 {
-//    font-size: 40px;
-//    font-weight: 600;
-//    line-height: 52px;
-//    margin-top: 125px;
-//    margin-bottom: 86px;
-//  }
-//  .title-2 {
-//    font-size: 22px;
-//    font-weight: 600;
-//    line-height: 32px;
-//    margin-bottom: 24px;
-//  }
-//  .text {
-//    font-size: 18px;
-//    font-weight: 400;
-//    line-height: 30px;
-//  }
-//
-//  section {
-//    display: flex;
-//    justify-content: space-between;
-//    align-items: center;
-//    position: relative;
-//    margin-bottom: 120px;
-//  }
-//  subsection {
-//    width: 50%;
-//  }
-//  subsection-2 {
-//    width: 50%;
-//    display: flex;
-//    justify-content: center;
-//    align-items: center;
-//    img {
-//      position: absolute;
-//    }
-//  }
-//}
-//.box-9 {
-//   section {
-//     display: flex;
-//     align-items: center;
-//     margin-bottom: 162px;
-//     subsection {
-//       width: 55%;
-//       margin-top: 65px;
-//       .title-2 {
-//         font-size: 22px;
-//         font-weight: 600;
-//         line-height: 32px;
-//         margin-bottom: 24px;
-//       }
-//       .text {
-//         font-size: 18px;
-//         font-weight: 400;
-//         line-height: 30px;
-//       }
-//     }
-//     subsection-2 {
-//       width: 45%;
-//     }
-//     subsection-4 {
-//       width: 500px;
-//       display: flex;
-//       align-items: flex-start;
-//       justify-content: space-between;
-//       margin-top: 40px;
-//     }
-//   }
-//}
-//.box-10 {
-//  background-color: #F6F6F6;
-//  width: 100%;
-//  height: 763px;
-//  section-1 {
-//    .title {
-//      font-size: 32px;
-//      font-weight: 600;
-//      line-height: 52px;
-//      margin-bottom: 25px;
-//      padding-top: 77px;
-//    }
-//    .subtitle {
-//      font-size: 20px;
-//      font-weight: 400;
-//      line-height: 36px;
-//      margin-bottom: 52px;
-//      color: #213252;
-//    }
-//  }
-//  section-2 {
-//    display: flex;
-//    justify-content: space-between;
-//    //img:nth-last-child {
-//    //  padding-right: 12px;
-//    //}
-//
-//  }
-//
-//}
-//.box-11 {
-//  height: 916px;
-//  section {
-//    display: flex;
-//    subsection-1 {
-//      position: relative;
-//      z-index: 1;
-//      img {
-//        margin-left: -340px;
-//        margin-top: 53px;
-//      }
-//      .text-director {
-//        background-color: #ffffff;
-//        padding: 20px;
-//        font-size: 16px;
-//        font-weight: 400;
-//        line-height: 20px;
-//        border: 1px solid #DBE1E4;
-//        border-radius: 8px;
-//        position: absolute;
-//        z-index: 99;
-//        bottom: 40px;
-//      }
-//    }
-//    subsection-2 {
-//      position: absolute;
-//
-//      .title {
-//        font-size: 23px;
-//        font-weight: 600;
-//        line-height: 32px;
-//        position: absolute;
-//        z-index: 99;
-//        left: 620px;
-//        top: 225px;
-//        //margin-bottom: 24px;
-//        width: 575px;
-//      }
-//      .subtitle {
-//        font-size: 16px;
-//        font-weight: 400;
-//        line-height: 24px;
-//        position: absolute;
-//        right: 300px;
-//        width: 613px;
-//        z-index: 99;
-//      }
-//      .s1 {
-//        top: 380px;
-//        left: 620px;
-//      }
-//      .s2 {
-//        top: 475px;
-//        left: 620px;
-//      }
-//      section-form {
-//        position: absolute;
-//        z-index: 99;
-//        top: 640px;
-//        left: 520px;
-//      }
-//    }
-//
-//  }
-//}
 </style>
