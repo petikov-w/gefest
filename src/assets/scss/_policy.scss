@@ -1,17 +1,32 @@
 .pageTitle {
-  font-family: $font-RussoOne;
+  font-family: $font-Inter;
   font-size: 36px;
   font-weight: 400;
   line-height: 46px;
-  color: #EF5221;
+  color: #556686;
   margin: 30px 0;
 }
 .pageText {
-  font-family: $font-OpenSans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  color: #FFFFFF;
+  font-family: $font-Inter;
+  @include text_14_24;
+  color: #000000;
   margin-bottom: 30px;
-  padding-left: 30px;
+  padding-left: 15px;
+}
+
+.wrapper-sm {
+  width: 90vw;
+}
+
+.b5 {
+  font-size: 20px;
+  opacity: 0.5;
+}
+.bold {
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+ul{
+  margin-left: 20px;
 }

@@ -1,9 +1,9 @@
 <template lang="pug">
 div(v-if="isDesktop")
-  .wrapper-home
+  .wrapper
     include ../assets/pug/agreement
 div(v-if="isMobile")
-  .wrapper-home-m
+  .wrapper-sm
     include ../assets/pug/agreement
 </template>
 
@@ -62,11 +62,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  ul{
-    margin-left: 30px;
-  }
-  .b5 {
-    font-size: 20px;
-    opacity: 0.5;
-  }
+  //.wrapper-sm {
+  //  width: 90vw;
+  //}
+  //ul{
+  //   margin-left: 20px;
+  //}
+  //.b5 {
+  //  font-size: 20px;
+  //  opacity: 0.5;
+  //}
+  //.bold {
+  //  font-weight: bold;
+  //  opacity: 0.5;
+  //}
 </style>
