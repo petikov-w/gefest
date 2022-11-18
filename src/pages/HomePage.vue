@@ -29,8 +29,9 @@ hr
   .box-2-m(v-if="isMobile")
     .text-top(v-html="content_box_2.text_top" )
     .text-bottom {{ content_box_2.text_bottom }}
-    //.text-title-tab {{ content_box_2.text_title_tab }}
-    //include ../assets/pug/tabs
+    .text-title-tab {{ content_box_2.text_title_tab }}
+    SliderTabs(:list-items="content_tabs_m")
+    //include ../assets/pug/tabs_m
 //====================== 3 ===============================
 .box-3(v-if="isDesktop")
   .wrapper
@@ -246,10 +247,11 @@ hr
 import {useStore} from 'vuex';
 import {computed} from "vue";
 import Slider from "@/components/slider";
+import SliderTabs from "@/components/sliderTabs";
 
 export default {
   name: "HomePage",
-  components: {Slider},
+  components: {Slider, SliderTabs},
 
   setup(){
 
@@ -266,6 +268,7 @@ export default {
     const content_box_10 = computed(() => store.getters.getHomePageBox_10);
     const content_box_11 = computed(() => store.getters.getHomePageBox_11);
     const content_tabs = computed(() => store.getters.getTabs);
+    const content_tabs_m = computed(() => store.getters.getTabs_m);
     const isMobile = computed(() => store.getters.getIsMobile);
     const isDesktop = computed(() => store.getters.getIsDesktop);
     // const listDocuments = computed(() => store.getters.getHomePageBox_10.list_doc);
@@ -283,6 +286,7 @@ export default {
       content_box_10,
       content_box_11,
       content_tabs,
+      content_tabs_m,
       isMobile,
       isDesktop
     }
