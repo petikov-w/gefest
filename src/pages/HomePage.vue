@@ -30,8 +30,8 @@ hr
     .text-top(v-html="content_box_2.text_top" )
     .text-bottom {{ content_box_2.text_bottom }}
     .text-title-tab {{ content_box_2.text_title_tab }}
-    SliderTabs(:list-items="content_tabs_m")
-    //include ../assets/pug/tabs_m
+     SliderTabs(:list-items="content_tabs_m")
+     //include ../assets/pug/tabs_m
 //====================== 3 ===============================
 .box-3(v-if="isDesktop")
   .wrapper
@@ -245,17 +245,25 @@ hr
 
 <script>
 import {useStore} from 'vuex';
-import {computed} from "vue";
+import {computed, ref} from "vue";
+import 'swiper/css';
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/vue';
 import Slider from "@/components/slider";
 import SliderTabs from "@/components/sliderTabs";
 
 export default {
   name: "HomePage",
-  components: {Slider, SliderTabs},
+  components: {Slider, SliderTabs, Swiper, SwiperSlide},
+
 
   setup(){
 
     const store = useStore();
+    const prev = ref(null);
+    const next = ref(null);
     const content_box_1 = computed(() => store.getters.getHomePageBox_1);
     const content_box_2 = computed(() => store.getters.getHomePageBox_2);
     const content_box_3 = computed(() => store.getters.getHomePageBox_3);
@@ -288,7 +296,10 @@ export default {
       content_tabs,
       content_tabs_m,
       isMobile,
-      isDesktop
+      isDesktop,
+      prev,
+      next,
+      modules: [Navigation]
     }
   }
 }
