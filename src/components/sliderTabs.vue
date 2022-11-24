@@ -8,9 +8,6 @@ swiper(
   :pagination="false"
   :loop="false"
 )
-  //.swiper-button-prev.swiper-custom-nav(ref="prev")
-  //.swiper-button-next.swiper-custom-nav(ref="next")
-
   swiper-slide(v-for="(item, index) in listItems" :key="item.index")
     .swiper-button-prev.swiper-custom-nav(ref="prev")
     .swiper-button-next.swiper-custom-nav(ref="next")

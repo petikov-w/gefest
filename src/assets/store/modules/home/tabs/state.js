@@ -199,23 +199,47 @@ export default {
                     text: "Листовой прокат",
                     text_visible: true,
                     list_side: ["Лист Х/К", "Лист Г/К", "Лист НЛГ", "Лист ОЦ", "Лист рифл", "Лист ПВЛ", "Лист полимер"]
-                },
+                }
+
+            ]
+        },
+        {
+            image_a: require('@/assets/images/blackprocat_a.png'),
+            image_na: require('@/assets/images/blackprocat_na.png'),
+            image_main: require('@/assets/images/blackprocat_m.png'),
+            text_tab: "Черный металлопрокат",
+            content_side: [
                 {
                     text: "Сортовой прокат",
                     text_visible: true,
                     list_side: ["Арматура", "Катанка", "Круг", "Проволока", "Квадрат", "Шестигранник"]
                 },
+            ]
+        },
+        {
+            image_a: require('@/assets/images/blackprocat_a.png'),
+            image_na: require('@/assets/images/blackprocat_na.png'),
+            image_main: require('@/assets/images/blackprocat_m.png'),
+            text_tab: "Черный металлопрокат",
+            content_side: [
                 {
                     text: "Трубный прокат",
                     text_visible: true,
                     list_side: ["Труба профильная", "Труба Б/Ш", "Труба Э/С"]
                 },
+            ]
+        },
+        {
+            image_a: require('@/assets/images/blackprocat_a.png'),
+            image_na: require('@/assets/images/blackprocat_na.png'),
+            image_main: require('@/assets/images/blackprocat_m.png'),
+            text_tab: "Черный металлопрокат",
+            content_side: [
                 {
                     text: "Фасонный прокат",
                     text_visible: true,
                     list_side: ["Балка", "Уголок", "Швеллер"]
                 },
-
             ]
         },
         {
